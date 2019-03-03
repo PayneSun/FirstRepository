@@ -1,13 +1,13 @@
 /**
- * count_word.c
+ * ch_/count_word.c
  *
  * 2019/1/14
  */
 
 #include <stdio.h>
 
-#define IN  1	/* 在单词内 */
-#define OUT 0	/* 在单词外 */
+#define IN  1	/* 脭脷碌楼麓脢脛脷 */
+#define OUT 0	/* 脭脷碌楼麓脢脥芒 */
 
 main()
 {
