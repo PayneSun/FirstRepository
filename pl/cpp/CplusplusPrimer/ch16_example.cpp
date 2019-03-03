@@ -52,7 +52,7 @@ private:
 
 //
 template <typename T>
-void Blob<T>::check(size_type i, const std::string &msg) const {
+void Blob<T>::check(std::size_type i, const std::string &msg) const {
 	if (i >= data->size()) {
 		throw std::out_of_range(msg);
 	}
@@ -137,33 +137,13 @@ private:
 };
 
 
-
-
-
-#include <iostream>
-
-using namespace std;
-
-const long long MAX_LENGTH = 100000000;
-
-int node_set[4];
-int vert_set[MAX_LENGTH];
-
-
-int main() {
-	int numtc;
-	std::cin >> numtc;
-
-	for (std::size_t i = 0; i < 4; ++i) {
-		scanf("%d", &node_set[i]);
-	}
-
-	int tmp, idx = 0;
-	while (std::cin >> tmp) {
-		vert_set[idx++] = tmp;
-	}
-
-	//TODO
-
-	return 0;
+//
+template <typename F, typename T1, typename T2>
+void flip1(F f, T1 t1, T2 t2) {
+	f(t2, t1);
 }
+
+void f(int v1, int &v2) {
+	cout << v1 << " " << ++v2 << endl;
+}
+
