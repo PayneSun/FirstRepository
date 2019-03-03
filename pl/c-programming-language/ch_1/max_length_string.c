@@ -1,5 +1,5 @@
 /**
- * max_length_string.c
+ * ch_1/max_length_string.c
  *
  * 2019/1/15
  */
