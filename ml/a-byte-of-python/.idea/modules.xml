@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/AByteofPython.iml" filepath="$PROJECT_DIR$/.idea/AByteofPython.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../HeadFirstPython/.idea/HeadFirstPython.iml" filepath="$PROJECT_DIR$/../HeadFirstPython/.idea/HeadFirstPython.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../TibetNer/.idea/TibetNer.iml" filepath="$PROJECT_DIR$/../TibetNer/.idea/TibetNer.iml" />
+    </modules>
+  </component>
+</project>

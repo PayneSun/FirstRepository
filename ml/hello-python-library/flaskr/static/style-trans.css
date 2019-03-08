@@ -1,0 +1,71 @@
+/*
+    style.css
+
+ */
+
+
+/*
+ *
+ */
+#head {
+    text-align:center;
+}
+
+
+/*
+ *
+ */
+#content {
+    margin-left:25px;
+    margin-bottom:25%;
+}
+
+
+/*
+ *
+ */
+#content-tool {
+    width:1100px;
+    text-align:center;
+    margin-top:15px;
+    margin-bottom: 15px;
+}
+
+
+/*
+ *
+ */
+#translate {
+    width:60px;
+    height:30px;
+    font-size: medium;
+    background:dodgerblue;
+    color: white;
+}
+
+
+/*
+ *
+ */
+#content-input {
+    width:1100px;
+}
+
+
+/*
+ *
+ */
+#content-source {
+    padding-right:15px;
+    float:left;
+}
+
+
+/*
+ *
+ */
+
+
+/*
+ *
+ */
