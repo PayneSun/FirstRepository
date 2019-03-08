@@ -12,3 +12,4 @@ b = tf.constant([1.0, 2.0], name="b")
 result = a + b
 # print(a.graph is tf.get_default_graph())
 print(result)
+print(result)
