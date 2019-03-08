@@ -1,5 +1,8 @@
 # My Programming WorkSpace #
 
-pl: programming language
+  cs: Computer Science (Theory & Application)
+  ml: Machine Learning
+  nlp: Natural Language Processing
+  
   
   
