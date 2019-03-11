@@ -10,6 +10,9 @@
 typedef int ElementType;
 
 
+/*
+ *
+ */
 void MSort(ElementType A[], ElementType TmpArray[], int Left, int Right)
 {
 	int Center;
@@ -23,6 +26,9 @@ void MSort(ElementType A[], ElementType TmpArray[], int Left, int Right)
 }
 
 
+/*
+ *
+ */
 void MergeSort(ElementType A[], int N)
 {
 	ElementType *TmpArray;
@@ -37,6 +43,9 @@ void MergeSort(ElementType A[], int N)
 }
 
 
+/*
+ *
+ */
 void Merge(ElementType A[], ElementType TmpArray[],
 		int Lpos, int Rpos, int RightEnd) {
 	int i, LeftEnd, NumElements, TmpPos;
