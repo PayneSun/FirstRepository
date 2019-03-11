@@ -5,7 +5,7 @@
  */
  
 #include <fcntl.h>
-#include "syscalls.h"
+//#include "syscalls.h"
 #define PERMS 0666
 
 FILE *fopen(char *name, char *mode)
