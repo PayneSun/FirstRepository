@@ -4,5 +4,5 @@
 	2019/3/5
 =cut
 
-# ЕЅаазЂЪЭ
+# ДђгЁ
 print 'Hello, World\n'
