@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int power(int, int);
+int power(int base, int n);
 
 /*
  *
