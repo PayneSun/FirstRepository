@@ -1,7 +1,6 @@
-//
-// file: ch7_define.cpp
-// date: 11/2/2017
-//
+// ch07_class.cpp
+// define.cpp
+// 2017/2/11
 
 
 #include "define.h"

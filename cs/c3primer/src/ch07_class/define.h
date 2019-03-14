@@ -1,7 +1,7 @@
-// ch7_define.h
-// 2017.04.17
+// ch07_class.cpp
+// define.h
+// 2017/4/17
 
-//*
 #ifndef CP_CH7_CP_CH7_DEFINE_H_
 #define CP_CH7_CP_CH7_DEFINE_H_
 

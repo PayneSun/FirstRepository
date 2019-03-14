@@ -1,8 +1,7 @@
 // ch09_sequential_containers
-// ch09_example.cpp
-// 2017.04.18
+// source.cpp
+// 2017/4/18
 
-/*
 #include <iostream>
 #include <string>
 #include <array>
@@ -64,4 +63,3 @@ int main() {
 
 	return 0;
 }
-*/
