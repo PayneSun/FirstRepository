@@ -1,8 +1,7 @@
 // ch13_copy_control
-// ch13_example.cpp
-// 2017.05.03
+// source.cpp
+// 2017/5/3
 
-/*
 #include <iostream>
 #include <algorithm>
 
@@ -137,4 +136,3 @@ void StrVec::reallocate() {
 	first_free = dest;
 	cap = elements + newcapacity;
 }
-*/

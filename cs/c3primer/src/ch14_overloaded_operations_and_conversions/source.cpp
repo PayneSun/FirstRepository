@@ -1,6 +1,6 @@
 // ch14_overloaded_operations_and_conversions
-// ch14_example.cpp
-// 2018.08.25
+// source.cpp
+// 2018/8/25
 
 
 #include <iostream>

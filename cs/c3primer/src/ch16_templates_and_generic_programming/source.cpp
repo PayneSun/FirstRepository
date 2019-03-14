@@ -1,6 +1,6 @@
 // ch16_templates_and_generic_programming
-// ch16_example.cpp
-// 2018.11.13
+// source.cpp
+// 2018/11/13
 
 
 #include <iostream>

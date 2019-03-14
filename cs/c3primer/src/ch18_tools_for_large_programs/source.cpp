@@ -1,6 +1,6 @@
 // ch18_tools_for_lagre_programs
-// ch18_example.cpp
-// 2017.05.
+// source.cpp
+// 2017/5/
 
 
 #include <iostream>
