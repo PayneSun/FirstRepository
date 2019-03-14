@@ -1,8 +1,7 @@
 // ch12_dynamic_memory
-// ch12_example.cpp
-// 2017.05.02
+// source.cpp
+// 2017/5/2
 
-/*
 #include <iostream>
 #include <memory>
 #include <list>
@@ -49,4 +48,3 @@ int main() {
 
 	return 0;
 }
-*/
