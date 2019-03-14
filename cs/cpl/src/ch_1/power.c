@@ -4,13 +4,11 @@
  * 2019/1/15
  */
 
+
 #include <stdio.h>
 
-int power(int base, int n);
+int power(int, int);
 
-/*
- *
- */
 int main()
 {
 	int i;
