@@ -1,6 +1,6 @@
 // ch15_object_oriented_programming
-// ch15_example.cpp
-// 2018.10.24
+// source.cpp
+// 2018/10/24
 
 
 #include <iostream>

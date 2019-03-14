@@ -1,6 +1,6 @@
 // ch17_specialized_library_facilities
-// ch17_example.cpp
-// 2017.05.
+// source.cpp
+// 2017/5/
 
 
 #include <iostream>
