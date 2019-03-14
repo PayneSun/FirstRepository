@@ -1,8 +1,7 @@
 // ch11_associative_containers
-// ch11_example.cpp
-// 2017.04.28
+// source.cpp
+// 2017/4/28
 
-/*
 #include <iostream>
 #include <string>
 #include <vector>
@@ -91,4 +90,3 @@ int main() {
 
 	return 0;
 }
-*/
