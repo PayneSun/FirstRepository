@@ -18,5 +18,16 @@ const int &r3 = r1 * 2;
 double dval = 3.14;
 const int &rid = dval;
 
+int errNum = 0;
+int *const curErr = &errNum;
+const double pi = 3.1415926;
+const double *const pip = &pi; //指向常量对象的常量指针
 
- main() { }
+
+int main()
+{
+	int i = -1, &r = i;
+	const int ict = 0, &rct = ict;
+
+	return 0;
+}
