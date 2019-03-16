@@ -7,7 +7,6 @@
 #include "disjoint.h"
 
 
-
 void Initialize(Disjoint S) {
 	int i;
 
@@ -19,6 +18,18 @@ void Initialize(Disjoint S) {
 
 void SetUion(Disjoint S, SetType Root1, SetType Root2) {
 	S[Root2] = Root1;
+}
+
+
+void SetUion2(Disjoint S, SetType Root1, SetType Root2) {
+	if (S[Root2] < Root1) {
+		S[Root1] = Root2;
+	} else {
+		if (S[Root2] == S[Root1]) {
+			S[Root1]--;
+		}
+		S[Root2] = Root1;
+	}
 }
 
 
