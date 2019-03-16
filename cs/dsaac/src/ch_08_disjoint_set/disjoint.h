@@ -5,9 +5,10 @@
  */
 
 
+
 #define NumSets 10
 
-typedef int Disjoint[NumSets + 1];
+typedef  int Disjoint[NumSets + 1];
 typedef int SetType;
 typedef int ElementType;
 
