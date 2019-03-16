@@ -7,6 +7,7 @@
 ///*
 #define SpaceSize 10
 typedef int ElementType;
+typedef PtrToNode Posistion;
 
 struct Node {
 	ElementType Element;
