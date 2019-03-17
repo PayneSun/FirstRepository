@@ -4,17 +4,7 @@
  * 2017/10/17
  */
 
-
-#define SpaceSize 10
-
-typedef int ElementType;
-
-struct Node {
-	ElementType Element;
-	Position Next;
-};
-
-struct Node CursorSpace[SpaceSize];
+#include "cursor.h"
 
 
 /*
