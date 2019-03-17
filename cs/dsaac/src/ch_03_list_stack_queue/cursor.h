@@ -10,7 +10,7 @@
 
 typedef int PtrToNode;
 typedef PtrToNode List;
-typedef PtrToNode Posistion;
+typedef PtrToNode Position;
 
 void InitializeCursorSpace(void);
 
