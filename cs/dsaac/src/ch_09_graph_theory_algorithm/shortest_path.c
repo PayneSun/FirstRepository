@@ -24,7 +24,7 @@ void Unweighted(Table T)
 }
 
 
-void Unweighted(Table T)
+void Unweighted2(Table T)
 {
 	Queue Q;
 	Vertex V, W;
