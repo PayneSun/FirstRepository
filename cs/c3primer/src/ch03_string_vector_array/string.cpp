@@ -1,3 +1,6 @@
+// ch03_string_vector_array
+// string.cpp
+// 2019/3/26
 
 
 #include <iostream>
