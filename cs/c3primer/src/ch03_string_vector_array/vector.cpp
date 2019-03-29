@@ -1,12 +1,19 @@
 // ch03_string_vector_array
-// vector.cpp
-// 2019/3/26
+// array.cpp
+// 2019/3/28
 
 
 #include <iostream>
-#include <string>
-#include <vector>
+#include <iterator>
 
-std::vector<int> ivec{1, 2, 3};
-std::vector<int> ivec2(10, -1);
-std::vector<std::string> svec(5, "hi");
+
+int main()
+{
+	int ia[] = {11, 22, 33};
+	int *beg = std::begin(ia);
+	int *last = std::end(ia);
+
+	for (; beg != last; beg++) {
+		std::cout << *beg << std::endl;
+	}
+}
