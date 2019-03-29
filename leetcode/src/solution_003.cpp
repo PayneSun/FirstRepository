@@ -1,0 +1,74 @@
+/*
+ * LeetCode
+ * Question 003: Longest Substring Without Repeating Characters
+ * 2019/3/29
+ */
+
+#include <string>
+#include <sstream>
+
+using namespace std;
+
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
+
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        ListNode *header = NULL, *retNode = NULL, *curNode = NULL;
+
+        int sum = 0, carry = 0;
+        while (l1 && l2) {
+            sum = l1->val + l2->val + carry;
+            carry = sum / 10;
+            curNode = new ListNode(sum % 10);
+            if (retNode == NULL) {
+                retNode = curNode;
+                header = retNode;
+            } else {
+                retNode->next = curNode;
+                retNode = retNode->next;
+            }
+
+            l1 = l1->next;
+            l2 = l2->next;
+        }
+
+       while (l1) {
+            sum = l1->val + carry;
+            carry = sum / 10;
+            curNode = new ListNode(sum % 10);
+            if (retNode == NULL) {
+                retNode = curNode;
+                header = retNode;
+            } else {
+                retNode->next = curNode;
+                retNode = retNode->next;
+            }
+            l1 = l1->next;
+       }
+       while (l2) {
+            sum = l2->val + carry;
+            carry = sum / 10;
+            curNode = new ListNode(sum % 10);
+            if (retNode == NULL) {
+                retNode = curNode;
+                header = retNode;
+            } else {
+                retNode->next = curNode;
+                retNode = retNode->next;
+            }
+            l2 = l2->next;
+       }
+
+       if (carry) {
+           curNode = new ListNode(carry);
+           retNode->next = curNode;
+           retNode = retNode->next;
+       }
+       return header;
+    }
+};
