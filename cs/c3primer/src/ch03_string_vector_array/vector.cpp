@@ -1,5 +1,5 @@
 // ch03_string_vector_array
-// array.cpp
+// vector.cpp
 // 2019/3/28
 
 
