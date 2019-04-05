@@ -1,4 +1,4 @@
-// ch05_statment
+// ch05_statement
 // while.cpp
 // 2019/4/4
 
