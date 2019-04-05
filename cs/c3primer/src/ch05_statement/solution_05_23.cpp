@@ -1,4 +1,4 @@
-// ch05_statment
+// ch05_statement
 // solution_05_23.cpp
 // 2019/4/5
 

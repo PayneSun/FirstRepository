@@ -1,4 +1,4 @@
-// ch05_statment
+// ch05_statement
 // condition.cpp
 // 2019/4/3
 
