@@ -3,9 +3,8 @@
  * 2018/2/2
  */
 
-/*
-#include <stdio.h>
-#include <math.h>
+#include <cstdio>
+#include <cmath>
 
 int main() {
 	printf("%d\n", 11111111 * 11111111);
