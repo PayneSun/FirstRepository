@@ -1,17 +1,17 @@
 /*
- * prog_01_08.cpp
- * 2018/2/2
+ * prog_01_09.cpp
+ * 2019/4/7
  */
 
 #include <cstdio>
 
 int main() {
-	int a, b, t;
+	int a, b;
 	scanf("%d%d", &a, &b);
 
-	t = a;
-	a = b;
-	b = t;
+	a = a + b;
+	b = a - b;
+	a = a - b;
 	printf("%d %d\n", a, b);
 
 	return 0;
