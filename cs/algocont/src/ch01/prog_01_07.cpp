@@ -3,8 +3,7 @@
  * 2018/2/2
  */
 
-/*
-#include <stdio.h>
+#include <cstdio>
 
 int main() {
 	int n, m;
@@ -15,4 +14,3 @@ int main() {
 
 	return 0;
 }
-*/
