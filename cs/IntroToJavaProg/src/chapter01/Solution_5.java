@@ -1,0 +1,16 @@
+/** 
+ * Chapter 1
+ * Solution_5.java
+ * 2017.04.25
+ */
+
+
+package chapter01;
+
+
+public class Solution_5 {
+	public static void main(String[] args) {
+		System.out.println("(9.5*4.5-2.5*3)/(45.5-3.5) = "
+				+ (9.5*4.5-2.5*3)/(45.5-3.5));
+	}
+}
