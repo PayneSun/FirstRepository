@@ -1,6 +1,5 @@
 // ch02_variables_and_basic_types
 // compound_type.cpp
-//
 // 2019/3/14
 
 
