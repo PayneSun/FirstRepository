@@ -152,7 +152,7 @@ def delete_filename_in_data(data_with_filename):
         删除文件中的文件名
     """
     with open(data_with_filename, 'r', encoding="utf-8") as fin, \
-        open(data_with_filename + '.ftd', 'w', encoding="utf-8") as fout:
+        open(data_with_filename + '.pure', 'w', encoding="utf-8") as fout:
         for line in fin:
             if '.txt' not in line:
                 print(line)
@@ -161,11 +161,10 @@ def delete_filename_in_data(data_with_filename):
 
 
 
+if __name__ == "__main__":
 
-#++++++++++++++++++++++++++++
+    # 生成语料
+    # get_ner_in_patch("E:\\tibetan-ner", 'tibetan_dataset.ld')
 
-# 生成语料
-# get_ner_in_patch("E:\\tibetan-ner", 'tibetan-data-ld.out')
-
-# 剔除文件名
-delete_filename_in_data('tibetan-data-ld.out')
+    # 剔除文件名
+    delete_filename_in_data('tibetan_dataset.ld')
