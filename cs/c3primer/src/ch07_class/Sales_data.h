@@ -21,7 +21,7 @@ public:
 		       bookNo(s), units_sold(n), revenue(p * n) {}
 	explicit Sales_data(std::istream &);
 
-    std::string isbn() const { return bookNo; }
+    std::string isbn() const { return this->bookNo; }
     Sales_data& combine(const Sales_data&);
 
 private:
