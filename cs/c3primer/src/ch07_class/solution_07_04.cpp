@@ -1,4 +1,6 @@
-
+// ch07_class.cpp
+// solution_07_04.h
+// 2019/4/11
 
 
 #include <string>
