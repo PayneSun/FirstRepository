@@ -5,9 +5,11 @@
 
 
 class Person {
-	std::string name;
-	std::string addr;
+friend std::istream &read(std::istream &is, Person &per);
+std::ostream &print(std::ostream &os, const Person &per);
 
+public:
+	Person() = default;
 	Person(const std::string &name, const std::string &addr) :
 		name(name), addr(addr) {}
 
@@ -18,6 +20,9 @@ class Person {
 	std::string getAdds() const {
 		return this->addr;
 	}
+private:
+	std::string name;
+	std::string addr;
 };
 
 
