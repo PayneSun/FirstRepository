@@ -16,12 +16,19 @@ friend std::ostream &print(std::ostream&, const Sales_data&);
 
 public:
 	Sales_data() = default;
-	explicit Sales_data(const std::string &s) : bookNo(s) {}
+	explicit Sales_data(const std::string &s) : bookNo(s)
+	{
+	}
 	Sales_data(const std::string &s, unsigned n, double p) :
-		       bookNo(s), units_sold(n), revenue(p * n) {}
+		       bookNo(s), units_sold(n), revenue(p * n)
+	{
+	}
 	explicit Sales_data(std::istream &);
 
-    std::string isbn() const { return this->bookNo; }
+    std::string isbn() const
+    {
+    	return this->bookNo;
+    }
     Sales_data& combine(const Sales_data&);
 
 private:
