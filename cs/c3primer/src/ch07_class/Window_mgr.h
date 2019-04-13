@@ -2,36 +2,26 @@
 // Window_mgr.h
 // 2019/4/12
 
-#include "Screen.h"
 
+#include "Screen.h"
 #include <vector>
 #include <string>
 
+class Screen;
+
 
 class Window_mgr {
+public:
+	using ScreenIndex = std::vector<Screen>::size_type;
+	void clear(ScreenIndex);
+
 private:
 	std::vector<Screen> screens{ Screen(24, 80, ' ') };
 };
 
 
-inline Screen &Screen::move(pos r, pos c)
+void Window_mgr::clear(ScreenIndex i)
 {
-	pos row = r * this->width;
-	this->cursor = row + c;
-
-	return *this;
-}
-
-
-inline char Screen::get(pos r, pos c) const
-{
-	pos row = r * this->width;
-
-	return this->contents[row + c];
-}
-
-
-void Screen::some_member() const
-{
-	++this->access_ctr;
+	Screen &s = this->screens[i];
+	s.contents = std::string(s.height * s.width, ' ');
 }
