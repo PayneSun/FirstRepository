@@ -1,5 +1,5 @@
 
-import crf
+import crf_thread
 
 
 if __name__ == "__main__":
@@ -11,7 +11,7 @@ if __name__ == "__main__":
         for line in fin:
             test_text_str += line
 
-    crf = crf.Crf(test_text_str)
+    crf = crf_thread.CRF(test_text_str)
 
     crf.tagger()
     outstr = crf.output()
