@@ -90,7 +90,7 @@ class CRF():
         print("[Debug]")
         print(self.raw_text)
 
-        ftmp = open("crf_input.tmp", 'w', encoding="utf-8")
+        ftmp = open(r".\tempdata\crf_input.tmp", 'w', encoding="utf-8")
         para_list = self.text_2_para()
         for para in para_list:
             sent_list = self.para_2_sent(para)
@@ -102,7 +102,7 @@ class CRF():
     def tagger(self):
         self.doc_2_crf_input()
 
-        cmd_str = r".\model\crf_test.exe -m .\model\crf_model crf_input.tmp > crf_result.tmp"
+        cmd_str = r".\model\crf_test.exe -m .\model\crf_model .\tempdata\crf_input.tmp > .\tempdata\crf_result.tmp"
         os.popen(cmd_str)
 
         # cmd_str_test = "ipconfig"
@@ -120,7 +120,7 @@ class CRF():
                   ['B-ORG', 'I-ORG']]
 
         ne_list = [[], [], []]
-        with open("crf_result.tmp", "r", encoding="utf-8") as fin:
+        with open(r".\tempdata\crf_result.tmp", "r", encoding="utf-8") as fin:
             for syll_tag in fin:
                 syll_tag = syll_tag.strip().split("\t")
                 if len(syll_tag):

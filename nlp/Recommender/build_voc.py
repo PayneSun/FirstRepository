@@ -3,6 +3,8 @@
 import os
 import nltk
 import nltk.stem
+import numpy as np
+
 from nltk.corpus import stopwords
 from nltk import SnowballStemmer
 
@@ -58,7 +60,7 @@ def doc_2_vec(file_name, list_voc, stop_list):
     voc_map_sub = {}
     extract_voc(file_name, stop_list, voc_map_sub)
     doc_voc = list(voc_map_sub.keys())
-    print(doc_voc)
+    # print(doc_voc)
 
     doc_vec = [0 for i in range(len(list_voc))]
     for word in doc_voc:
@@ -85,20 +87,28 @@ def doc_sim(doc_vec_1, doc_vec_2):
     """
         计算两个文档向量的相似性
     """
-    ret = 0.0
-    for i in doc_vec_1:
-        for j in doc_vec_2:
-            ret += i * j
+    array1 = np.array(doc_vec_1)
+    array2 = np.array(doc_vec_2)
+
+    ret = np.matmul(array1, array2)
+    ret /= (np.sqrt(np.matmul(array1, array1)) * np.sqrt(np.matmul(array2, array2)))
+
+    # ret = 0.0
+    # for i in doc_vec_1:
+    #     for j in doc_vec_2:
+    #         ret += i * j
+
     return ret
 
 
 if __name__ == "__main__":
     # nltk.download()
+    text_directory = r"eng-reading-dataset\Tech"
+    test_file_name = r"eng-reading-dataset\Tech\Tech_0001.txt"
 
     stopword_file = "large-stoplist.txt"
     stop_list = get_stopword(stopword_file)
 
-    text_directory = "eng-reading-dataset"
     file_name_list = list_dir(text_directory)
     list_voc = generate_voc(file_name_list, stop_list)
 
@@ -106,7 +116,7 @@ if __name__ == "__main__":
     #     print("[Debug]", index, ": ", element)
 
     doc_sim_list = []
-    test_file_name = r"eng-reading-dataset\Tech\Tech_0357.txt"
+
     for index, element in enumerate(file_name_list):
         if element != test_file_name:
             doc_sim_map = {}
@@ -114,13 +124,12 @@ if __name__ == "__main__":
             doc_vec_1 = doc_2_vec(test_file_name, list_voc, stop_list)
             doc_vec_2 = doc_2_vec(element, list_voc, stop_list)
             doc_sim_map["doc_sim"] = doc_sim(doc_vec_1, doc_vec_2)
+            print("[Debug]: ", doc_sim_map["doc_sim"])
             doc_sim_list.append(doc_sim_map)
-    sorted(doc_sim_list, key=lambda keys:keys["doc_sim"], reverse=True)
+    doc_sim_list = sorted(doc_sim_list, key=lambda keys:keys["doc_sim"], reverse=True)
 
     for idx, ele in enumerate(doc_sim_list):
-        if (idx <= 4):
+        if (idx <= 10):
             print(ele)
         else:
             break
-
-
