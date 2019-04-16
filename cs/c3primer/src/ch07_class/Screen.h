@@ -19,6 +19,7 @@ public:
 	Screen(pos ht, pos wd, char c): height(ht), width(wd), contents(ht * wd, c)
 	{
 	}
+
 	char get() const
 	{
 		return this->contents[cursor];

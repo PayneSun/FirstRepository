@@ -16,6 +16,12 @@ friend std::ostream &print(std::ostream&, const Sales_data&);
 
 public:
 	Sales_data() = default;
+	Sales_data() : Sales_data("", 0, 0)
+	{
+	}
+	Sales_data(std::string s) : Sales_data(s, 0, 0)
+	{
+	}
 	explicit Sales_data(const std::string &s) : bookNo(s)
 	{
 	}
