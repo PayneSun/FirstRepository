@@ -15,6 +15,7 @@ int main(int argc, char *argv[]) {
 	std::cout << "Hi!" << std::ends;
 
 	std::ifstream input(argv[1]);
+
 	std::ofstream output(argv[0]);
 
 	std::ofstream out("file", std::ofstream::out);
