@@ -5,7 +5,7 @@
 #include <iostream>
 
 
-std::istream &func(std::istream &is)
+std::istream& func(std::istream &is)
 {
 	auto oldState = is.rdstate();
 
