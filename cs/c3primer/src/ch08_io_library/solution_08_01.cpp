@@ -22,7 +22,6 @@ std::istream &func(std::istream &is)
 
 int main(int argc, char *argv[])
 {
-//	std::istream is;
 	func(std::cin);
 
 	return 0;
