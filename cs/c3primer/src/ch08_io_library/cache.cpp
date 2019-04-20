@@ -4,7 +4,6 @@
 
 #include <iostream>
 
-
 int main(int argc, char *argv[]) {
 	std::cout << "Hi!" << std::endl;
 	std::cout << "Hi!" << std::flush;

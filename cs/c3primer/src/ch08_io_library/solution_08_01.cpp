@@ -1,12 +1,10 @@
 // ch08_io_library
 // solution_08_01.cpp
-// 2017.04.18
+// 2019.04.18
 
 #include <iostream>
 
-
-std::istream& func(std::istream &is)
-{
+std::istream& func(std::istream &is) {
 	auto oldState = is.rdstate();
 
 	int tmp;
@@ -19,9 +17,7 @@ std::istream& func(std::istream &is)
 	return is;
 }
 
-
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
 	func(std::cin);
 
 	return 0;

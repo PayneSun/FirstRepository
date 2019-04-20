@@ -7,7 +7,6 @@
 #include <sstream>
 #include <vector>
 
-
 int main(int argc, char *argv[]) {
 	struct PersonInfo {
 		std::string name;
@@ -25,6 +24,13 @@ int main(int argc, char *argv[]) {
 			info.phones.push_back(word);
 		}
 		people.push_back(info);
+	}
+
+	for (const auto &entry : people) {
+		std::ostringstream oss;
+		for (const auto &nums : entry.phones) {
+			oss << " " << nums;
+		}
 	}
 
 	return 0;

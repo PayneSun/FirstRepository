@@ -8,8 +8,7 @@
 #include <vector>
 #include <cstring>
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
 	std::ifstream ifs("word_list.txt");
 
 	std::string lstr;
