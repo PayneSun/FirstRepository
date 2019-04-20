@@ -8,8 +8,7 @@
 #include <vector>
 #include <cstring>
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
 	std::ofstream ofs("word_list.txt", std::ofstream::app);
 
 	std::string ostr = "yyyXXX";
