@@ -27,26 +27,5 @@ int main(int argc, char *argv[]) {
 		people.push_back(info);
 	}
 
-
-
-
-	// example for ostringstream
-	for (const auto &entry : people) {
-		std::ostringstream formatted, badNums;
-		for (const auto &nums : entry.phones) {
-			if (!valid(nums)) {
-				badNums << " " << nums;
-			} else {
-				formatted << " " << format(nums);
-			}
-		}
-		if (badNums.str().empty()) {
-			std::cout << entry.name << " " << formatted.str() << std::endl;
-		} else {
-			std::cerr << "input error: " << entry.name
-				<< " invalid numbers(s) " << badNums.str() << std::endl;
-		}
-	}
-
 	return 0;
 }
