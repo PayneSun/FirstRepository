@@ -6,8 +6,8 @@
 #include <string>
 #include <forward_list>
 
-
-void func(std::forward_list<std::string> &flstr, const std::string &str1, const std::string &str2) {
+void func(std::forward_list<std::string> &flstr, const std::string &str1,
+		const std::string &str2) {
 	auto prev = flstr.before_begin();
 	auto curr = flstr.begin();
 
@@ -26,10 +26,8 @@ void func(std::forward_list<std::string> &flstr, const std::string &str1, const 
 	}
 }
 
-
-int main()
-{
-	std::forward_list<std::string> flstr = {"welcome", "to", "china" };
+int main() {
+	std::forward_list<std::string> flstr = { "welcome", "to", "china" };
 
 	std::string str1 = "ho";
 	std::string str2 = "XX";
