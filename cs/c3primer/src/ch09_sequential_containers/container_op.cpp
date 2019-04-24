@@ -40,5 +40,12 @@ int main() {
 	}
 	std::cout << "\n--*--" << std::endl;
 
+	std::list<int> ilist(10, 42);
+	ilist.resize(15);
+	ilist.resize(25, -1);
+	ilist.resize(5);
+
+
+
 	return 0;
 }
