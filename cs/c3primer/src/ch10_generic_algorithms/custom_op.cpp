@@ -1,6 +1,6 @@
 // ch10_generic_algorithms
-// intro_generic.cpp
-// 2019.04.25
+// custom_op.cpp
+// 2019.04.26
 
 #include <iostream>
 #include <algorithm>
@@ -9,35 +9,21 @@
 #include <iterator>
 #include <string>
 
-
-void elimDups(std::vector<std::string> &words) {
-	std::sort(words.begin(), words.end());
-	auto end_unique = std::unique(words.begin(), words.end());
-	words.erase(end_unique, words.end());
+bool isShorter(const std::string &s1, const std::string &s2) {
+	return s1.size() < s2.size();
 }
 
-
 int main() {
-	int ia[] = { 27, 210, 12, 47, 109, 83 };
-	int val = 83;
+	std::vector<std::string> svec { "welcome", "to", "china", "or" };
 
-	int* ret = std::find(std::begin(ia), std::end(ia), val);
-	std::cout << (ret - ia) << std::endl;
-
-	int sum = std::accumulate(std::begin(ia), std::end(ia), 0);
-	std::cout << "Sum of array ia: " << sum << std::endl;
-
-	std::vector<int> ivec(10,0);
-	std::fill(ivec.begin(), ivec.end(), 5);
-	for (const auto s : ivec) {
-		std::cout << "-- " << s;
+	std::sort(svec.begin(), svec.end(), isShorter);
+	for (const auto str : svec) {
+		std::cout << str << std::endl;
 	}
-	std::cout << std::endl;
 
-	std::vector<double> dvec;
-	std::fill_n(std::back_inserter(dvec), 10, 1.23);
-	for (const auto s : dvec) {
-		std::cout << "-- " << s;
+	std::stable_sort(svec.begin(), svec.end(), isShorter);
+	for (const auto str : svec) {
+		std::cout << str << std::endl;
 	}
 
 	return 0;

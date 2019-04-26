@@ -9,13 +9,11 @@
 #include <iterator>
 #include <string>
 
-
 void elimDups(std::vector<std::string> &words) {
 	std::sort(words.begin(), words.end());
 	auto end_unique = std::unique(words.begin(), words.end());
 	words.erase(end_unique, words.end());
 }
-
 
 int main() {
 	int ia[] = { 27, 210, 12, 47, 109, 83 };
@@ -27,7 +25,7 @@ int main() {
 	int sum = std::accumulate(std::begin(ia), std::end(ia), 0);
 	std::cout << "Sum of array ia: " << sum << std::endl;
 
-	std::vector<int> ivec(10,0);
+	std::vector<int> ivec(10, 0);
 	std::fill(ivec.begin(), ivec.end(), 5);
 	for (const auto s : ivec) {
 		std::cout << "-- " << s;
