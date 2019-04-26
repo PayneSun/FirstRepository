@@ -6,7 +6,6 @@
 #include <algorithm>
 #include <vector>
 
-
 int main() {
 	std::vector<int> ivec;
 	for (int i = 0; i != 100; ++i) {
