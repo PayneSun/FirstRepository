@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <numeric>
 #include <vector>
+#include <iterator>
 
 
 int main() {
@@ -18,6 +19,18 @@ int main() {
 	int sum = std::accumulate(std::begin(ia), std::end(ia), 0);
 	std::cout << "Sum of array ia: " << sum << std::endl;
 
+	std::vector<int> ivec(10,0);
+	std::fill(ivec.begin(), ivec.end(), 5);
+	for (const auto s : ivec) {
+		std::cout << "-- " << s;
+	}
+	std::cout << std::endl;
+
+	std::vector<double> dvec;
+	std::fill_n(std::back_inserter(dvec), 10, 1.23);
+	for (const auto s : dvec) {
+		std::cout << "-- " << s;
+	}
 
 	return 0;
 }
