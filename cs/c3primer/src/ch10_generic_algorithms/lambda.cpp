@@ -26,6 +26,11 @@ int main() {
 	std::for_each(svec.begin(), svec.end(),
 			[svec](decltype(svec)::value_type val) {std::cout << val << std::endl;});
 
+	auto fn = [sz]() mutable { return ++sz; };
+	int rt = fn();
+	std::cout << rt << std::endl;
+
+
 	return 0;
 }
 
