@@ -8,7 +8,8 @@
 #include <vector>
 #include <iterator>
 
-int main() {
+int main()
+{
 	std::istream_iterator<int> ii_int(std::cin), ii_eof;
 
 	std::cout << std::accumulate(ii_int, ii_eof, 0) << std::endl;
