@@ -6,7 +6,8 @@
 #include <algorithm>
 #include <list>
 
-int main() {
+int main()
+{
 	std::list<int> il1 { 1, 2, 3, 4, 5, 5 };
 
 	std::list<int> il2, il3;
