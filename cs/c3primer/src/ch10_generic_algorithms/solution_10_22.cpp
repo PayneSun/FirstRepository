@@ -10,11 +10,13 @@
 
 using namespace std::placeholders;
 
-bool isShorter(const std::string &str) {
+bool isShorter(const std::string &str)
+{
 	return str.size() <= 6;
 }
 
-int main() {
+int main()
+{
 	std::vector<std::string> svec { "welcome", "to", "Australia" };
 
 	auto ret = std::count_if(svec.begin(), svec.end(),
