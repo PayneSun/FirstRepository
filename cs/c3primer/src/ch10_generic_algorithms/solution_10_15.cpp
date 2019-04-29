@@ -4,7 +4,8 @@
 
 #include <iostream>
 
-int main() {
+int main()
+{
 	int a = 5;
 
 	auto f = [a](int b) {return a + b;};
