@@ -7,11 +7,13 @@
 #include <vector>
 #include <string>
 
-bool isLength(const std::string &str) {
+bool isLength(const std::string &str)
+{
 	return str.size() == 5;
 }
 
-int main() {
+int main()
+{
 	std::vector<std::string> svec { "welcome", "to", "China", "and", "Japan" };
 
 	auto ret = std::partition(svec.begin(), svec.end(), isLength);
