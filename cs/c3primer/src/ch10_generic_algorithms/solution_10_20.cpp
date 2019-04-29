@@ -7,7 +7,8 @@
 #include <string>
 #include <vector>
 
-int main() {
+int main()
+{
 	std::vector<std::string> svec { "welcome", "to", "chinaxxx" };
 
 	auto ret = std::count_if(svec.begin(), svec.end(),
