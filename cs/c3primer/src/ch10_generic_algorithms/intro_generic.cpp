@@ -9,13 +9,15 @@
 #include <iterator>
 #include <string>
 
-void elimDups(std::vector<std::string> &words) {
+void elimDups(std::vector<std::string> &words) 
+{
 	std::sort(words.begin(), words.end());
 	auto end_unique = std::unique(words.begin(), words.end());
 	words.erase(end_unique, words.end());
 }
 
-int main() {
+int main()
+{
 	int ia[] = { 27, 210, 12, 47, 109, 83 };
 	int val = 83;
 
