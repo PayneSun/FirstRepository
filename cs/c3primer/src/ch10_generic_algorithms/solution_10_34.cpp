@@ -7,7 +7,8 @@
 #include <algorithm>
 #include <iterator>
 
-int main() {
+int main()
+{
 	std::vector<int> ivec;
 	for (int i = 0; i != 10; ++i) {
 		ivec.push_back(i);
