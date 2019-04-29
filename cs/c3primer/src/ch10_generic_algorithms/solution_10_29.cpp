@@ -9,7 +9,8 @@
 #include <algorithm>
 #include <iterator>
 
-int main() {
+int main()
+{
 	std::ifstream ifs("word_list.txt");
 	std::istream_iterator<std::string> iitr(ifs), ieof;
 
