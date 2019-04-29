@@ -9,7 +9,8 @@
 #include <iterator>
 #include <string>
 
-int main() {
+int main() 
+{
 	auto f = []() -> int {return 42;};
 	std::cout << f() << std::endl;
 
