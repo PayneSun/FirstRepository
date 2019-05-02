@@ -16,7 +16,9 @@ int main()
 	std::string str;
 	int val;
 	while (std::cin >> str >> val) {
-		sipvec.push_back(std::make_pair(str, val));
+		sipvec.push_back(std::pair<std::string, int>{str, val});
+//		sipvec.push_back(std::make_pair(str, val));
+//		sipvec.push_back({str, val});
 	}
 
 	for (const auto ele : sipvec) {
