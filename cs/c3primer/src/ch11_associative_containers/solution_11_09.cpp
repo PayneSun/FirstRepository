@@ -2,6 +2,7 @@
 // solution_11_09.cpp
 // 2019.05.02
 
+
 #include <iostream>
 #include <string>
 #include <list>
