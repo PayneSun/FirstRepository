@@ -14,7 +14,7 @@
 int main()
 {
 	std::map<std::string, std::string> authors = {
-			{"Joyce", "James"},	{"Austen", "Jane"}, {"Dickens", "Charles"}};
+			{"Joyce", "James"}, {"Austen", "Jane"}, {"Dickens", "Charles"}};
 
 	std::vector<int> ivec;
 	for (std::vector<int>::size_type i = 0; i != 10; ++i) {
@@ -36,7 +36,6 @@ int main()
 	std::map<std::string, int>::value_type v3;
 	std::map<std::string, int>::key_type v4;
 	std::map<std::string, int>::mapped_type v5;
-
 
 	return 0;
 }
