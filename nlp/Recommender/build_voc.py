@@ -104,7 +104,7 @@ def doc_sim(doc_vec_1, doc_vec_2):
 if __name__ == "__main__":
     # nltk.download()
     text_directory = r"eng-reading-dataset\Tech"
-    test_file_name = r"eng-reading-dataset\Tech\Tech_0001.txt"
+    test_file_name = r"eng-reading-dataset\Tech\Tech_0002.txt"
 
     stopword_file = "large-stoplist.txt"
     stop_list = get_stopword(stopword_file)
@@ -129,7 +129,7 @@ if __name__ == "__main__":
     doc_sim_list = sorted(doc_sim_list, key=lambda keys:keys["doc_sim"], reverse=True)
 
     for idx, ele in enumerate(doc_sim_list):
-        if (idx <= 10):
+        if (idx < 5):
             print(ele)
         else:
             break
