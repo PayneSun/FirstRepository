@@ -13,11 +13,11 @@
 using namespace std;
 
 
-int main() {
+int main()
+{
 	string word;
 	map<string, size_t> word_count;
-	set<string> exclude = { "The", "But", "And", "Or", "An", "A",
-							"the", "but", "and", "or", "an", "a"};
+	set<string> exclude = { "The", "But", "And", "Or", "An", "A", "the", "but", "and", "or", "an", "a"};
 	while (cin >> word) {
 		if (exclude.find(word) == exclude.end())
 		++word_count[word];

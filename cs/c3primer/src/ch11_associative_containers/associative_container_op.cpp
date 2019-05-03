@@ -14,7 +14,7 @@
 int main()
 {
 	std::map<std::string, std::string> authors = {
-			{"Joyce", "James"},	{"Austen", "Jane"}, {"Dickens", "Charles"}};
+			{"Joyce", "James"}, {"Austen", "Jane"}, {"Dickens", "Charles"}};
 
 	std::vector<int> ivec;
 	for (std::vector<int>::size_type i = 0; i != 10; ++i) {
@@ -42,8 +42,6 @@ int main()
 	set2.insert(ivec2.cbegin(), ivec2.cend());
 	set2.insert({1, 3, 5, 7, 1, 3, 5, 7});
 	std::cout << set2.size() << std::endl;
-
-
 
 	return 0;
 }
