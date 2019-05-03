@@ -37,6 +37,13 @@ int main()
 	std::map<std::string, int>::key_type v4;
 	std::map<std::string, int>::mapped_type v5;
 
+	std::vector<int> ivec2 = {2, 4, 6, 8, 2, 4, 6, 8};
+	std::set<int> set2;
+	set2.insert(ivec2.cbegin(), ivec2.cend());
+	set2.insert({1, 3, 5, 7, 1, 3, 5, 7});
+	std::cout << set2.size() << std::endl;
+
+
 
 	return 0;
 }
