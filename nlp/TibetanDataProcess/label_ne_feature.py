@@ -160,8 +160,14 @@ if __name__ == "__main__":
 
     # sentence = "ཁྲེན་ཆོན་གོས་ལྷ་སར་དུས་ཆེན་རིང་ལས་གནས་བརྟན་སྲུང་བྱེད་མཁན་འཐབ་ས་དང་པོའི་བཟོ་པ་དང་ལས་རིགས་ཁག་གི་མང་ཚོགས་ལ་གཟིགས་པ།"
 
-    raw_file_list = ["raw_input.txt", "tibetan-train.data", "tibetan-test.data", "tibetan_dataset.ld.pure"]
-    tag_file_list = ["tag_output.txt", "tibetan-train.data.ftag", "tibetan-test.data.ftag", "tibetan_dataset.ld.ftag"]
+    raw_file_list = ["raw_input.txt",
+                     "tibetan-train.data",
+                     "tibetan-test.data",
+                     "tibetan_dataset.ld.pure"]
+    tag_file_list = ["tag_output.txt",
+                     "tibetan-train.data.ftag",
+                     "tibetan-test.data.ftag",
+                     "tibetan_dataset.ld.ftag"]
 
     #---------------#
     selectedIndex = 2

@@ -335,12 +335,12 @@ def bilingual_align(src_lang, src_text, tar_text):
         print("Current language pairs are not supported!!")
         exit()
 
+if __name__ == "__main__":
+    # English-Chinese
+    bilingual_align('en', 'text_encn_en.txt', 'text_encn_cn.txt')
 
-# English-Chinese
-# bilingual_align('en', 'text_encn_en.txt', 'text_encn_cn.txt')
+    # Mongolian-Chinese
+    # bilingual_align('mn', 'text_mncn_mn.txt', 'text_mncn_cn.txt')
 
-# Mongolian-Chinese
-# bilingual_align('mn', 'text_mncn_mn.txt', 'text_mncn_cn.txt')
-
-# Tibetan-Chinese
-# bilingual_align('tb', 'text_tbcn_tb.txt', 'text_tbcn_cn.txt')
+    # Tibetan-Chinese
+    # bilingual_align('tb', 'text_tbcn_tb.txt', 'text_tbcn_cn.txt')
