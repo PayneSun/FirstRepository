@@ -8,6 +8,7 @@
 #include <vector>
 #include <list>
 #include <memory>
+#include <new>
 
 
 int main()
@@ -19,4 +20,9 @@ int main()
 	std::shared_ptr<int> p5 = std::make_shared<int>();
 	auto p6 = std::make_shared<std::vector<std::string>>();
 
+	int *p7 = new int;
+	int *p8 = new (std::nothrow) int;
+
+	const int *pci = new const int(1024);
+	delete pci;
 }
