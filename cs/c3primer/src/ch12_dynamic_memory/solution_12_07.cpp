@@ -15,18 +15,16 @@ std::shared_ptr<std::vector<int>> getVec()
 
 void inputVec(std::shared_ptr<std::vector<int>> ps)
 {
-	auto pVec = ps.get();
 	int val;
 	while (std::cin >> val) {
-		pVec->push_back(val);
+		ps->push_back(val);
 	}
 }
 
 
 void printVec(std::shared_ptr<std::vector<int>> ps)
 {
-	auto pVec = ps.get();
-	for (auto it = pVec->cbegin(); it != pVec->cend(); ++it) {
+	for (auto it = ps->cbegin(); it != ps->cend(); ++it) {
 		std::cout << *it << std::endl;
 	}
 }
