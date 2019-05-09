@@ -7,7 +7,6 @@
 #include <list>
 #include <vector>
 
-#include "ch12_define.h"
 
 using namespace std;
 
