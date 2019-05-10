@@ -2,6 +2,7 @@
 // str_blob.h
 // 2019.05.08
 
+#include "str_blob_ptr.h"
 
 #include <iostream>
 #include <string>
@@ -9,9 +10,12 @@
 #include <memory>
 #include <initializer_list>
 
+class StrBlobPtr;
 
 class StrBlob {
 public:
+	friend class StrBlobPtr;
+
 	typedef std::vector<std::string>::size_type size_type;
 	StrBlob();
 	StrBlob(std::initializer_list<std::string> il);
@@ -21,6 +25,12 @@ public:
 	void pop_back();
 	std::string& front();
 	std::string& back();
+	StrBlobPtr begin() { return StrBlobPtr(*this); }
+	StrBlobPtr end() {
+		auto ret = StrBlobPtr(*this, this->data->size());
+		return ret;
+	}
+
 private:
 	std::shared_ptr<std::vector<std::string>> data;
 	void check(size_type i, const std::string &msg) const;
