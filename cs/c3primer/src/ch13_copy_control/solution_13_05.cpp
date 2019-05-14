@@ -11,11 +11,11 @@ public:
 	HasPtr(const std::string &s = new std::string()):
 		ps(new std::string(s)), i(0) {}
 	HasPtr(const HasPtr& hp) {
-		*(this->ps) = *hp.ps;
+		*(this->ps) = *(hp.ps);
 		this->i = hp.i;
 	}
 private:
-	std::string *ps;
+	std::string *ps = nullptr;
 	int i;
 };
 
