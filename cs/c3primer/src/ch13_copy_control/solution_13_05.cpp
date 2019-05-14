@@ -15,7 +15,7 @@ public:
 		this->i = hp.i;
 	}
 private:
-	std::string *ps = nullptr;
+	std::string *ps;
 	int i;
 };
 
