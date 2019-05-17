@@ -1,4 +1,4 @@
-#coding:utf-8
+# coding:utf-8
 
 """
 
@@ -42,7 +42,7 @@ def word_to_syllable(word):
                 syllable_list.append(mono_syllable)
                 mono_syllable = ''
             else:
-                if word[i+1] not in delimiter:
+                if word[i + 1] not in delimiter:
                     syllable_list.append(mono_syllable)
                     mono_syllable = ''
         else:
@@ -72,7 +72,7 @@ def para_to_sentence(para_str):
                 sent_list.append(mono_sent)
                 mono_sent = ''
             else:
-                if para_str[i+1] not in delimiter:
+                if para_str[i + 1] not in delimiter:
                     sent_list.append(mono_sent)
                     mono_sent = ''
         else:
@@ -152,13 +152,12 @@ def delete_filename_in_data(data_with_filename):
         删除文件中的文件名
     """
     with open(data_with_filename, 'r', encoding="utf-8") as fin, \
-        open(data_with_filename + '.pure', 'w', encoding="utf-8") as fout:
+            open(data_with_filename + '.pure', 'w', encoding="utf-8") as fout:
         for line in fin:
             if '.txt' not in line:
                 print(line)
                 fout.write(line)
     print("Finish task!!")
-
 
 
 if __name__ == "__main__":

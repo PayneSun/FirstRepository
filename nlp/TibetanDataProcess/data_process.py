@@ -51,12 +51,12 @@ def post_process(file_name):
     fout = open(file_name + '.ftd', 'w')
     with open(file_name) as fin:
         for line in fin:
-            if "+++" in line:  #delete invalid sentence tag
+            if "+++" in line:  # delete invalid sentence tag
                 line = '\n'
                 fout.write(line)
-            elif "-DOCSTART-" in line:  #delete file end tag
+            elif "-DOCSTART-" in line:  # delete file end tag
                 continue
-            else:  #catch word and its tag
+            else:  # catch word and its tag
                 col_labeled = line.strip().split()
                 # print col_labeled
                 out_line = []
@@ -106,11 +106,9 @@ def post_process2(labeled_file_name, config_file_name):
     fout.close()
 
 
-
 '''----test ---------------'''
 
 # pre_process2('testa.en')
 post_process2('testa.cn.out', 'testa.cn.cfg')
 
 # post_process('output.txt')
-
