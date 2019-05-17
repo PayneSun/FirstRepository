@@ -1,3 +1,8 @@
+"""
+    ndarray.py
+    2019/5/16
+"""
+
 import numpy as np
 
 
