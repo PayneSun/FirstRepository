@@ -1,5 +1,0 @@
-Hello Python!
-Hello Java!
-Hello C++!
-Hello Perl!
-Hello SQL!
