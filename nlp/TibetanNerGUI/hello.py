@@ -1,0 +1,153 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'hello.ui'
+#
+# Created by: PyQt5 UI code generator 5.11.3
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+import os
+import crf_thread
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(685, 450)
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setWeight(50)
+        MainWindow.setFont(font)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.InputText = QtWidgets.QTextEdit(self.centralwidget)
+        self.InputText.setGeometry(QtCore.QRect(110, 20, 550, 150))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.InputText.setFont(font)
+        self.InputText.setPlaceholderText("")
+        self.InputText.setObjectName("InputText")
+        self.InputLabel = QtWidgets.QLabel(self.centralwidget)
+        self.InputLabel.setGeometry(QtCore.QRect(10, 70, 81, 41))
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setWeight(50)
+        self.InputLabel.setFont(font)
+        self.InputLabel.setObjectName("InputLabel")
+        self.OutputLabel = QtWidgets.QLabel(self.centralwidget)
+        self.OutputLabel.setGeometry(QtCore.QRect(10, 230, 81, 41))
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setWeight(50)
+        self.OutputLabel.setFont(font)
+        self.OutputLabel.setObjectName("OutputLabel")
+        self.PerLabel = QtWidgets.QLabel(self.centralwidget)
+        self.PerLabel.setGeometry(QtCore.QRect(110, 350, 81, 30))
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑 Light")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setWeight(50)
+        self.PerLabel.setFont(font)
+        self.PerLabel.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.PerLabel.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.PerLabel.setObjectName("PerLabel")
+        self.LocLabel = QtWidgets.QLabel(self.centralwidget)
+        self.LocLabel.setGeometry(QtCore.QRect(250, 350, 91, 30))
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑 Light")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setWeight(50)
+        self.LocLabel.setFont(font)
+        self.LocLabel.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.LocLabel.setObjectName("LocLabel")
+        self.OrgLabel = QtWidgets.QLabel(self.centralwidget)
+        self.OrgLabel.setGeometry(QtCore.QRect(110, 380, 130, 30))
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑 Light")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setWeight(50)
+        self.OrgLabel.setFont(font)
+        self.OrgLabel.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.OrgLabel.setObjectName("OrgLabel")
+        self.RunButton = QtWidgets.QToolButton(self.centralwidget)
+        self.RunButton.setGeometry(QtCore.QRect(580, 360, 81, 41))
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.RunButton.setFont(font)
+        self.RunButton.setObjectName("RunButton")
+        self.RunButton.clicked.connect(self.runOnClick)  # added-by-sun
+        self.OtherLabel = QtWidgets.QLabel(self.centralwidget)
+        self.OtherLabel.setGeometry(QtCore.QRect(270, 380, 71, 30))
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑 Light")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setWeight(50)
+        self.OtherLabel.setFont(font)
+        self.OtherLabel.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.OtherLabel.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.OtherLabel.setObjectName("OtherLabel")
+        self.ResultText = QtWidgets.QTextBrowser(self.centralwidget)
+        self.ResultText.setGeometry(QtCore.QRect(110, 190, 550, 150))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.ResultText.setFont(font)
+        self.ResultText.setObjectName("ResultText")
+        self.ClearButton = QtWidgets.QToolButton(self.centralwidget)
+        self.ClearButton.setGeometry(QtCore.QRect(470, 360, 81, 41))
+        font = QtGui.QFont()
+        font.setFamily("微软雅黑")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.ClearButton.setFont(font)
+        self.ClearButton.setObjectName("ClearButton")
+        self.ClearButton.clicked.connect(self.clearOnClick)  # added-by-sun
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "藏文命名实体识别软件"))
+        self.InputLabel.setText(_translate("MainWindow", "[输入文本]"))
+        self.OutputLabel.setText(_translate("MainWindow", "[识别结果]"))
+        self.PerLabel.setText(_translate("MainWindow", "人名：PER"))
+        self.LocLabel.setText(_translate("MainWindow", "地名：LOC"))
+        self.OrgLabel.setText(_translate("MainWindow", "组织机构名：ORG"))
+        self.RunButton.setText(_translate("MainWindow", "识别"))
+        self.OtherLabel.setText(_translate("MainWindow", "其它：O"))
+        self.ClearButton.setText(_translate("MainWindow", "清除"))
+
+    def runOnClick(self):
+        inputText = self.InputText.toPlainText()
+        labeledText = self.tag(inputText)
+        self.ResultText.setText(labeledText)
+        print("[debug] tagging ...")
+
+    def clearOnClick(self):
+        self.InputText.clear()
+        self.ResultText.clear()
+        print("[debug] clearing ...")
+
+    def tag(self, inputText):
+        outstr = crf_thread.tagger(inputText)
+        return outstr
