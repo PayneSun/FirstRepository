@@ -7,9 +7,15 @@
 #include <algorithm>
 
 
+class Folder;
+class Message;
+
+
 class Folder {
-
-
+public:
+	Folder() = default;
+	void addMsg(Message *pMsg);
+	void remMsg(Message *pMsg);
 };
 
 
@@ -79,6 +85,26 @@ Message& Message::operator=(const Message &rhs)
 	folders = rhs.folders;
 	add_to_Folders(rhs);
 	return *this;
+}
+
+
+void swap(Message &lhs, Message &rhs)
+{
+	using std::swap;
+	for (auto f: lhs.folders) {
+		f->remMsg(&rhs);
+	}
+	for (auto f: rhs.folders) {
+		f->remMsg(&rhs);
+	}
+	swap(lhs.folders, rhs.folders);
+	swap(lhs.contents, rhs.contents);
+	for (auto f: lhs.folders) {
+		f->addMsg(&lhs);
+	}
+	for (auto f: rhs.folders) {
+		f->addMsg(&rhs);
+	}
 }
 
 
