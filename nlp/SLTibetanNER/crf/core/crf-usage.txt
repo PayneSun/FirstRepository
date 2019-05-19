@@ -1,0 +1,12 @@
+1.crf_learn  template train.data model >> train-info.txt
+2.crf_test  -m model testtest.data >> test-info.txt
+3.perl conlleval.pl -d "\t"  -r < test-info.txt
+或perl conlleval.pl -d "\t" < test-info.txt
+
+相似度计算 
+crf_test -v1 -m model train.data >>  train_v1.TXT
+crf_test -v1 -m model test.data >>  train_v1.TXT
+
+-d '\t' 表示用制表符作为间隔
+-r 表示强行以最后两个的内容加入统计
+-o "1" 表示不计算标记为"1"的

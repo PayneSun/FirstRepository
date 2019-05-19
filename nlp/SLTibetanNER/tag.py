@@ -110,6 +110,10 @@ class Tagger():
         return diff
 
 
+    
+
+
+
 if __name__ == "__main__":
 
     crf_path = r".\crf"
