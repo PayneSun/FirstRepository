@@ -17,6 +17,7 @@ public:
 		s.elements = s.first_free = s.cap = nullptr;
 	}
 	StrVec &operator=(const StrVec &);
+	StrVec &operator=(const StrVec &&) noexcept;
 	~StrVec();
 	void push_back(const std::string &);
 	std::size_t size() const {
@@ -93,6 +94,19 @@ StrVec& StrVec::operator =(const StrVec &rhs)
 	free();
 	elements = data.first;
 	first_free = data.second;
+	return *this;
+}
+
+
+StrVec& StrVec::operator=(const StrVec &&rhs) noexcept
+{
+	if (this != &rhs) {
+		free();
+		elements = rhs.elements;
+		first_free = rhs.first_free;
+		cap = rhs.cap;
+		rhs.elements = rhs.first_free = rhs.cap = nullptr;
+	}
 	return *this;
 }
 
