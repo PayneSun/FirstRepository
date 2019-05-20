@@ -12,6 +12,10 @@ class StrVec {
 public:
 	StrVec(const StrVec &):
 		elements(nullptr), first_free(nullptr), cap(nullptr) {}
+	StrVec(StrVec &&s) noexcept
+		: elements(s.elements), first_free(s.first_free), cap(s.cap) {
+		s.elements = s.first_free = s.cap = nullptr;
+	}
 	StrVec &operator=(const StrVec &);
 	~StrVec();
 	void push_back(const std::string &);
