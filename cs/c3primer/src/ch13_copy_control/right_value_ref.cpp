@@ -5,7 +5,6 @@
 #include <iostream>
 #include <utility>
 
-
 int main() {
 	int &&rr1 = 42;
 //	int &&rr2 = rr1;
