@@ -5,3 +5,5 @@ cs/*/.settings/
 cs/*/.classpath
 cs/*/.project
 cs/*/.cproject
+
+nlp/*/*.txt
