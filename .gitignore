@@ -1,4 +1,5 @@
 .idea/
+
 cs/*/bin/
 cs/*/.settings/
 cs/*/.classpath
