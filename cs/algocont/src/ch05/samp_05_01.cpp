@@ -2,13 +2,14 @@
 //
 // 2018.09.12
 
-#include <iostream>
+#include <cstdio>
 #include <algorithm>
 
 using namespace std;
 const int maxn = 10000;
-/*
-int main() {
+
+int main()
+{
 	int n, q, x, a[maxn], kase = 0;
 	while (scanf("%d%d", &n, &q) == 2 && n) {
 		printf("CASE# %d:\n", ++kase);
@@ -29,7 +30,6 @@ int main() {
 
 	return 0;
 }
-*/
 
 /*
 4 1

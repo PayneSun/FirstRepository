@@ -1,0 +1,7 @@
+.idea/
+
+cs/*/bin/
+cs/*/.settings/
+cs/*/.classpath
+cs/*/.project
+cs/*/.cproject
