@@ -24,10 +24,13 @@ class Message {
 public:
 	explicit Message(const std::string &str = ""): contents(str) {}
 	Message(const Message &);
+	Message(Message &&);
 	Message& operator=(const Message&);
+	Message& operator=(const Message &&);
 	~Message();
 	void save(Folder&);
 	void remove(Folder&);
+	void move_Folder(Message *m);
 
 private:
 	std::string contents;
@@ -64,6 +67,12 @@ Message::Message(const Message &m):
 }
 
 
+Message::Message(Message &&m): contents(std::move(m.contents))
+{
+	move_Folder(&m);
+}
+
+
 void Message::remove_from_Folders()
 {
 	for (auto f : folders) {
@@ -78,12 +87,34 @@ Message::~Message()
 }
 
 
+void Message::move_Folder(Message *m)
+{
+	folders = std::move(m->folders);
+	for (auto f : folders) {
+		f->remMsg(m);
+		f->addMsg(this);
+	}
+	m->folders.clear();
+}
+
+
 Message& Message::operator=(const Message &rhs)
 {
 	remove_from_Folders();
 	contents = rhs.contents;
 	folders = rhs.folders;
 	add_to_Folders(rhs);
+	return *this;
+}
+
+
+Message& Message::operator=(const Message &&rhs)
+{
+	if (this != &rhs) {
+		remove_from_Folders();
+		contents = std::move(rhs.contents);
+		move_Folder(&rhs);
+	}
 	return *this;
 }
 

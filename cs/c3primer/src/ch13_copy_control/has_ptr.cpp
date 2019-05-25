@@ -13,6 +13,7 @@ public:
 		ps(new std::string(s)), i(0), use(new std::size_t(1)) {}
 	HasPtr(const HasPtr &p):
 		ps(new std::string(*p.ps)), i(p.i), use(p.use) { ++*use; }
+	HasPtr(HasPtr &&p) noexcept : ps(p.ps), i(p.i) { p.ps = 0; }
 	HasPtr& operator=(const HasPtr &);
 	~HasPtr() { delete ps; }
 private:
