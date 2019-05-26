@@ -5,6 +5,6 @@ cs/*/.settings/
 cs/*/.classpath
 cs/*/.project
 cs/*/.cproject
-cs/*/src/*/*.[exe|txt|data]$
+cs/*/src/*/*\.[exe|txt|data]
 
 nlp/*/*.txt
