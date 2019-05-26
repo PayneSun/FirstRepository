@@ -1,1 +1,3 @@
-src/*/*.[txt|data|exe]$
+src/*/*.exe
+src/*/*.txt
+src/*/*.data
