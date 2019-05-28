@@ -20,6 +20,7 @@ public:
 	StrVec &operator=(const StrVec &&) noexcept;
 	~StrVec();
 	void push_back(const std::string &);
+	void push_back(std::string &&);
 	std::size_t size() const {
 		return first_free - elements;
 	}
@@ -52,6 +53,13 @@ void StrVec::push_back(const std::string &s)
 {
 	chk_n_alloc();
 	alloc.construct(first_free++, s);
+}
+
+
+void StrVec::push_back(std::string &&s)
+{
+	chk_n_alloc();
+	alloc.construct(first_free++, std::move(s));
 }
 
 
