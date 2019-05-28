@@ -26,7 +26,7 @@ public:
 	Message(const Message &);
 	Message(Message &&);
 	Message& operator=(const Message&);
-	Message& operator=(const Message &&);
+	Message& operator=(Message &&);
 	~Message();
 	void save(Folder&);
 	void remove(Folder&);
@@ -108,7 +108,7 @@ Message& Message::operator=(const Message &rhs)
 }
 
 
-Message& Message::operator=(const Message &&rhs)
+Message& Message::operator=(Message &&rhs)
 {
 	if (this != &rhs) {
 		remove_from_Folders();
