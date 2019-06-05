@@ -77,5 +77,5 @@ int main()
 	p = &bulk;
 	Quote &r = bulk;
 
-
+	return 0;
 }
