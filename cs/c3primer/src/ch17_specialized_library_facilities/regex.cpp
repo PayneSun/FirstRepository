@@ -21,7 +21,13 @@ int main()
 		std::cout << result.str() << std::endl;
 	}
 
+	std::regex re("[[:alnum:]]+\\.(cpp|cxx|cc)$", std::regex::icase);
+	std::string filename;
+	while (std::cin >> filename) {
+		if (std::regex_search(filename, result, re)) {
+			std::cout << result.str() << std::endl;
+		}
+	}
+
 	return 0;
 }
-
-
