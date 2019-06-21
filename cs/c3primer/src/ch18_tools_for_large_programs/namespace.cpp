@@ -1,5 +1,5 @@
 // ch18_tools_for_lagre_programs
-// exception.cpp
+// namespace.cpp
 // 2019/6/21
 
 
@@ -31,5 +31,3 @@ int main()
 	//
 	return 0;
 }
-
-
