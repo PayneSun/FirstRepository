@@ -1,33 +1,32 @@
 // ch18_tools_for_lagre_programs
 // namespace.cpp
-// 2019/6/21
+// 2019/6/23
 
 
 #include <iostream>
 #include <exception>
 
 
-class out_of_stock: public std::runtime_error
+namespace nspa
 {
-public:
-	explicit out_of_stock(const std::string &s):
-		std::runtime_error(s) {}
+	int i, j;
+	//
 };
 
 
-class isbn_mismatch: public std::logic_error
+void f()
 {
-public:
-	explicit isbn_mismatch(const std::string &s):
-		std::logic_error(s) {}
-	isbn_mismatch(const std::string &s, const std::string &lhs, const std::string &rhs):
-		std::logic_error(s), left(lhs), right(rhs) {}
-	const std::string left, right;
-};
+	using namespace nspa;
+	std::cout << i *j << std::endl;
+}
 
 
 int main()
 {
-	//
+	nspa::i = 1;
+	nspa::j = 2;
+
+	f();
+
 	return 0;
 }
