@@ -4,7 +4,10 @@
 
 
 #include <iostream>
-#include <typeinfo>
+#include <string>
+#include <vector>
+#include <functional>
+#include <algorithm>
 
 
 class Screen {
@@ -36,7 +39,9 @@ Screen& Screen::move(Directions cm)
 }
 
 
-Screen::Action Screen::Menu[] = { &Screen::home, &Screen::home, &Screen::home, &Screen::home, };
+Screen::Action Screen::Menu[] = {
+	&Screen::home, &Screen::forward, &Screen::back, &Screen::up, &Screen::down
+};
 
 
 int main()
@@ -54,6 +59,14 @@ int main()
 
 	char c1 = (pScreen->*pmf)();
 	char c2 = (myScreen.*pmf2)(0,0);
+
+	std::vector<std::string*> pvec;
+	std::function<bool (const std::string*)> fp = &std::string::empty;
+	std::find_if(pvec.begin(), pvec.end(), fp);
+
+	std::vector<std::string> svec;
+	std::find_if(svec.begin(), svec.end(), std::mem_fn(&std::string::empty));
+	std::find_if(svec.begin(), svec.end(), std::bind(&std::string::empty, std::placeholders::_1));
 
 	return 0;
 }
