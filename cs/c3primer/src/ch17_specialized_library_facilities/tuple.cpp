@@ -24,7 +24,6 @@ int main()
 	std::size_t sz = std::tuple_size<trans>::value;
 	std::tuple_element<1, trans>::type cnt = std::get<1>(item);
 
-
 	return 0;
 }
 
