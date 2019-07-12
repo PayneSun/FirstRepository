@@ -1,8 +1,6 @@
-/*
- * LeetCode
- * Question 028: Implement strStr()
- * 2019/3/25
- */
+// Question 028: Implement strStr()
+//
+// 2019/03/25
 
 #include <string>
 #include <vector>

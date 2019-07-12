@@ -1,8 +1,5 @@
-/*
- * LeetCode
- * Question 038: Count and Say
- * 2019/3/26
- */
+// Question 038: Count and Say
+// 2019/03/26
 
 #include <string>
 #include <sstream>

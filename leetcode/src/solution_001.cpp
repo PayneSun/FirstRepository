@@ -1,8 +1,6 @@
-/*
- * LeetCode
- *
- * Question 001: Two Sum
- */
+// Question 001: Two Sum
+//
+// 2019/03/18
 
 #include <vector>
 

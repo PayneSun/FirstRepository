@@ -1,8 +1,6 @@
-/*
- * LeetCode
- *
- * Question 014: Longest Common Prefix
- */
+// Question 014: Longest Common Prefix
+//
+// 2019/03/08
 
 #include <string>
 #include <vector>

@@ -1,8 +1,6 @@
-/*
- * LeetCode
- *
- * Question 013: Roman to Integer
- */
+// Question 013: Roman to Integer
+//
+// 2019/03/08
 
 #include <map>
 #include <iostream>

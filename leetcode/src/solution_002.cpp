@@ -1,13 +1,12 @@
-/*
- * LeetCode
- * Question 002: Add Two Numbers
- * 2019/3/29
- */
+// Question 002: Add Two Numbers
+//
+// 2019/03/29
 
 #include <string>
 #include <sstream>
 
 using namespace std;
+
 
 struct ListNode {
     int val;

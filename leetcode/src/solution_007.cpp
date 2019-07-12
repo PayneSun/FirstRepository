@@ -1,8 +1,6 @@
-/*
- * LeetCode
- *
- * Question 007: Reverse Integer
- */
+// Question 007: Reverse Integer
+//
+// 2019/03/08
 
 #include <climits>
 

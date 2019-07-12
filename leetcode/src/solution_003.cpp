@@ -1,8 +1,6 @@
-/*
- * LeetCode
- * Question 003: Longest Substring Without Repeating Characters
- * 2019/3/31
- */
+// Question 003: Longest Substring Without Repeating Characters
+//
+// 2019/03/31
 
 #include <string>
 

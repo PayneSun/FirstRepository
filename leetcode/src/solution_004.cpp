@@ -1,8 +1,6 @@
-/*
- * LeetCode
- * Question 004: Median of Two Sorted Arrays
- * 2019/4/3
- */
+// Question 004: Median of Two Sorted Arrays
+//
+// 2019/04/03
 
 #include <string>
 #include <vector>
