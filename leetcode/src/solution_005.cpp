@@ -1,10 +1,7 @@
-/*
- * LeetCode
- * Question 005: Longest Palindromic Substring
- * 2019/4/4
- */
+// Question 005: Longest Palindromic Substring
+//
+// 2019/04/04
 
-#include <string>
 #include <string>
 
 using namespace std;

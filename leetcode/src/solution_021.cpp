@@ -1,8 +1,6 @@
-/*
- * LeetCode
- * Question 021: Merge Two Sorted Lists
- * 2019/3/24
- */
+// Question 021: Merge Two Sorted Lists
+//
+// 2019/3/24
 
 #include <string>
 #include <stack>

@@ -1,8 +1,6 @@
-/*
- * LeetCode
- * Question 027: Remove Element
- * 2019/3/25
- */
+// Question 027: Remove Element
+//
+// 2019/03/25
 
 #include <string>
 #include <vector>

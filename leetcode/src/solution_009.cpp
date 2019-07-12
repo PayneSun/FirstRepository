@@ -1,8 +1,6 @@
-/*
- * LeetCode
- *
- * Question 009: Palindrome Number
- */
+// Question 009: Palindrome Number
+//
+// 2019/03/08
 
 #include <sstream>
 #include <algorithm>

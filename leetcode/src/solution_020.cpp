@@ -1,8 +1,6 @@
-/*
- * LeetCode
- * Question 020: Valid Parentheses
- * 2019/3/22
- */
+// Question 020: Valid Parentheses
+//
+// 2019/03/22
 
 #include <string>
 #include <stack>
