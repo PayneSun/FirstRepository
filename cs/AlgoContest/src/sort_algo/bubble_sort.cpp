@@ -7,10 +7,10 @@
 
 
 template<typename T>
-void bubbleSort(T array[], int len)
+void bubbleSort(T array[], int n)
 {
-	for (int i = 0; i < len; ++i) {
-		for (int j = 1; j < len - i; ++j) {
+	for (int i = 0; i < n; ++i) {
+		for (int j = 1; j < n - i; ++j) {
 			if (array[j-1] > array[j]) {
 				std::swap(array[j-1], array[j]);
 			}
