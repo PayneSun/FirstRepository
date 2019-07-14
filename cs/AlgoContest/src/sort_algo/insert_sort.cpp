@@ -1,35 +1,32 @@
-//
 // insert_sort.cpp
+//
+// 2019/07/14
 
 #include <iostream>
-#include <vector>
 #include <algorithm>
 
-void insertSort(std::vector<int> &ivec)
+
+template<typename T>
+void insertSort(T array[], int len)
 {
-	for (std::size_t i = 1; i < ivec.size(); ++i) {
-		for (std::size_t j = i - 1; j >= 0; --j) {
-			if (ivec[j] > ivec[i]) {
-				int tmp = ivec[i];
-				ivec[i] = ivec[j];
-				ivec[j] = tmp;
-			}
+	for (int i = 1; i < len; ++i) {
+		int j = i, tmp = array[i];
+		while (j > 0 && array[j-1] > tmp) {
+			array[j] = array[j-1];
+			j--;
 		}
+		array[j] = tmp;
 	}
 }
 
 
 int main()
 {
-	std::vector<int> ivec{9, 7, 5, 3, 1};
-	for (auto it = ivec.begin(); it != ivec.end(); ++it) {
-		std::cout << *it;
-	}
+	int array[] = {9, 48, 7, 3, 22, 1, 0, 16, 15, 14};
+	insertSort(array, 10);
 
-	insertSort(ivec);
-
-	for (auto i = 0; i < ivec.size(); ++i) {
-		std::cout << ivec[i];
+	for (int i = 0; i < 10; ++i) {
+		std::cout << array[i] << " ";
 	}
 
 	return 0;
