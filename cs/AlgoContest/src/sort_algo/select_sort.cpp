@@ -11,15 +11,15 @@ template<typename T>
 void selectSort(T array[], int n)
 {
 	for (int i = 0; i < n; ++i) {
-		int index = i, tmp = array[i];
+		int min = i;
 		for (int j = i + 1; j < n; ++j) {
-			if (array[j] < tmp) {
-				tmp = array[j];
-				index = j;
+			if (array[j] < array[min]) {
+				min = j;
 			}
 		}
-
-		std::swap(array[i], array[index]);
+		if (min != i) {
+			std::swap(array[i], array[min]);
+		}
 	}
 }
 
