@@ -1,5 +1,5 @@
 // select_sort.cpp
-//
+// chapter-2: sort
 // 2019/07/14
 
 #include <iostream>
@@ -17,9 +17,7 @@ void selectSort(T array[], int n)
 				min = j;
 			}
 		}
-		if (min != i) {
-			std::swap(array[i], array[min]);
-		}
+		std::swap(array[i], array[min]);
 	}
 }
 
