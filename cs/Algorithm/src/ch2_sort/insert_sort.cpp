@@ -1,5 +1,5 @@
 // insert_sort.cpp
-//
+// chapter-2: sort
 // 2019/07/14
 
 #include <iostream>
