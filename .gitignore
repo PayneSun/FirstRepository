@@ -1,10 +1,10 @@
-#.idea/
+.idea/
 
-#cs/**/bin/
-#cs/**/.settings/
-#cs/**/.classpath
-#cs/**/.project
-#cs/**/.cproject
-#cs/**/src/**/\*.[exe|txt|data]
+cs/**/bin/
+cs/**/.settings/
+cs/**/.classpath
+cs/**/.project
+cs/**/.cproject
+cs/**/src/**/\*.[exe|txt|data]
 
-#nlp/**/\*.txt
+nlp/**/\*.txt
