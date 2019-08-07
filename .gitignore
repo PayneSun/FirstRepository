@@ -1,5 +1,7 @@
 .idea/
 
+abc.text
+
 #cs/**/bin/
 #cs/**/.settings/
 #cs/**/.classpath
