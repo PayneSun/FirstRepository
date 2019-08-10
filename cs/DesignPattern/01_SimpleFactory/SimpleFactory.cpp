@@ -1,5 +1,5 @@
+// Design Pattern
 // SimpleFactory.cpp
-//
 // 2019/8/10
 
 #include <iostream>
