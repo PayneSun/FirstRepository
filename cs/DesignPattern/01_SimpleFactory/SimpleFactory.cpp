@@ -50,10 +50,9 @@ public:
 
 int main()
 {
-	Factory fact;
 	std::string productName("ConcreteProductX");
-
 	auto pcp = Factory::createProduct(productName);
+
 	std::cout << pcp->getProductName() << std::endl;
 
 	return 0;
