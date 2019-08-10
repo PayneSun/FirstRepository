@@ -38,7 +38,7 @@ private:
 class Factory
 {
 public:
-	Product* createProduct(std::string productName) {
+	static Product* createProduct(std::string productName) {
 		if (productName == "ConcreteProductA") {
 			return new ConcreteProductA();
 		} else {
@@ -53,7 +53,7 @@ int main()
 	Factory fact;
 	std::string productName("ConcreteProductX");
 
-	auto pcp = fact.createProduct(productName);
+	auto pcp = Factory::createProduct(productName);
 	std::cout << pcp->getProductName() << std::endl;
 
 	return 0;
