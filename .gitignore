@@ -13,9 +13,7 @@ ml/**/.idea/
 ml/**/**/*.txt
 
 nlp/**/data/
+nlp/**/dist/
 nlp/**/model/
+nlp/**/build/
 nlp/**/.idea/
-nlp/MnZhAlignGUI/dist/
-nlp/MnZhAlignGUI/build/
-nlp/MnZhAlignGUI/_*/
-nlp/Recommender/eng-reading-dataset/
