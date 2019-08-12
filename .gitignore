@@ -12,6 +12,7 @@ ml/**/data/
 ml/**/.idea/
 ml/**/**/*.txt
 
+nlp/**/crf/
 nlp/**/data/
 nlp/**/dist/
 nlp/**/model/
