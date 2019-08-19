@@ -33,7 +33,6 @@ int main()
 	std::for_each(pfvec.begin(), pfvec.end(), std::mem_fun(&Foo::test));
 	std::for_each(fvec.begin(), fvec.end(), std::mem_fun_ref(&Foo::test));
 
-
 	return 0;
 }
 
