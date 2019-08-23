@@ -28,7 +28,8 @@ int main()
 {
 	std::vector<std::vector<int>> matrix{{1,2,8,9},{2,4,9,12},{4,7,10,13},{6,8,11,15}};
 
-	std::cout << find(matrix, 7) << std::endl;
+	std::cout << find(matrix, 11) << std::endl;
+	std::cout << find(matrix, 17) << std::endl;
 
 	return 0;
 }
