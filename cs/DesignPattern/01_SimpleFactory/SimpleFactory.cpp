@@ -1,6 +1,6 @@
 // Design Pattern
 // SimpleFactory.cpp
-// 2019/8/10
+// 2019.08.10
 
 #include <iostream>
 #include <string>
