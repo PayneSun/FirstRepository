@@ -9,9 +9,8 @@
 bool find(const std::vector<std::vector<int>> &matrix, int value)
 {
 	bool ret = false;
-	int row = 0,
-		col = matrix[0].size() - 1;
-	while (row >= matrix.size() || col < 0) {
+	int row = 0, col = matrix[0].size() - 1;
+	while (row < matrix.size() && col >= 0) {
 		if (matrix[row][col] > value) {
 			col--;
 		} else if (matrix[row][col] < value) {
