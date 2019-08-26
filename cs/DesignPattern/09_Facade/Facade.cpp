@@ -5,8 +5,6 @@
 #include <iostream>
 
 
-
-
 class SystemA
 {
 public:
