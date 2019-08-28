@@ -103,7 +103,10 @@ int main()
 	pccb->setMediator(pm);
 
 	pcca->sendMsg(2, "hello, i am a");
+
+	std::cout << __LINE__ << std::endl;
 	pccb->sendMsg(1, "hello, i am b");
+	std::cout << __LINE__ << std::endl;
 
 	delete pcca;
 	delete pccb;
