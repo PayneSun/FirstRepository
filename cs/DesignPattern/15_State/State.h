@@ -6,15 +6,30 @@
 #define STATE_H
 
 #include "Context.h"
+#include <iostream>
 
 
 class State
 {
 public:
-	State() {}
-	virtual ~State() {}
-	virtual void handle(Context *pc) {}
+	State();
+	virtual ~State();
+	virtual void handle(Context *);
 };
 
+
+State::State() {
+	//
+}
+
+
+State::~State() {
+	//
+}
+
+
+void State::handle(Context *) {
+	//
+}
 
 #endif //STATE_H
