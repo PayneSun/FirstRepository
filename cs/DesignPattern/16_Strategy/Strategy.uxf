@@ -5,136 +5,108 @@
     <id>UMLClass</id>
     <coordinates>
       <x>560</x>
-      <y>110</y>
+      <y>180</y>
       <w>200</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>Colleague
---
-+ receiveMsg(): void
-+ sendMsg(int): void
-+ setMediator(Mediator *): void</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>180</x>
-      <y>260</y>
-      <w>190</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>ConcreteMediator
---
-+ operation(int): void</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>240</x>
-      <y>310</y>
-      <w>540</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0;520.0;40.0;520.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>180</x>
-      <y>120</y>
-      <w>190</w>
       <h>70</h>
     </coordinates>
-    <panel_attributes>Mediator
+    <panel_attributes>Strategey
 --
-+ operation(int): void
-+ register(Colleague *): void</panel_attributes>
+ + algorithm(): void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
+    <id>UMLClass</id>
     <coordinates>
-      <x>360</x>
-      <y>290</y>
-      <w>90</w>
-      <h>30</h>
+      <x>180</x>
+      <y>180</y>
+      <w>210</w>
+      <h>70</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+    <panel_attributes>Context
+--
+ + algorithm(): void
+ + setStrategy(Strategey *): void</panel_attributes>
+    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>680</x>
-      <y>190</y>
+      <y>240</y>
       <w>100</w>
-      <h>80</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0;80.0;40.0;80.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;80.0;50.0;80.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>520</x>
-      <y>190</y>
+      <y>240</y>
       <w>130</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>110.0;10.0;110.0;40.0;10.0;40.0;10.0;60.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>270</x>
-      <y>180</y>
-      <w>30</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+    <additional_attributes>110.0;10.0;110.0;50.0;10.0;50.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
-      <y>150</y>
-      <w>220</w>
+      <x>380</x>
+      <y>210</y>
+      <w>200</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;</panel_attributes>
-    <additional_attributes>200.0;10.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>430</x>
-      <y>250</y>
+      <y>320</y>
       <w>200</w>
       <h>70</h>
     </coordinates>
-    <panel_attributes>ConcreteColleagueA
+    <panel_attributes>ConcreteStrategyA
 --
-+ sendMsg(int): void
-+ setMediator(Mediator *): void</panel_attributes>
+ + algorithm(): void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>660</x>
-      <y>250</y>
+      <y>320</y>
       <w>200</w>
       <h>70</h>
     </coordinates>
-    <panel_attributes>ConcreteColleagueB
+    <panel_attributes>ConcreteStrategyB
 --
-+ sendMsg(int): void
-+ setMediator(Mediator *): void</panel_attributes>
+ + algorithm(): void</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>180</x>
+      <y>320</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>strategy-&gt;algorithm();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>240</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

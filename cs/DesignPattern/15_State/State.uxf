@@ -4,137 +4,87 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>560</x>
-      <y>110</y>
+      <x>530</x>
+      <y>130</y>
+      <w>170</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>State
+--
++ handle(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>120</y>
       <w>200</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Context
+--
+ + changeState(State *): void
+ + request(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>180</y>
+      <w>90</w>
       <h>90</h>
     </coordinates>
-    <panel_attributes>Colleague
---
-+ receiveMsg(): void
-+ sendMsg(int): void
-+ setMediator(Mediator *): void</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>180</x>
-      <y>260</y>
-      <w>190</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>ConcreteMediator
---
-+ operation(int): void</panel_attributes>
-    <additional_attributes/>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;70.0;50.0;70.0;70.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>240</x>
-      <y>310</y>
-      <w>540</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0;520.0;40.0;520.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>180</x>
-      <y>120</y>
-      <w>190</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>Mediator
---
-+ operation(int): void
-+ register(Colleague *): void</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>360</x>
-      <y>290</y>
-      <w>90</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>680</x>
-      <y>190</y>
-      <w>100</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0;80.0;40.0;80.0;60.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>520</x>
-      <y>190</y>
-      <w>130</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>110.0;10.0;110.0;40.0;10.0;40.0;10.0;60.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>270</x>
+      <x>480</x>
       <y>180</y>
-      <w>30</w>
-      <h>100</h>
+      <w>120</w>
+      <h>90</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>100.0;10.0;100.0;50.0;10.0;50.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
+      <x>400</x>
       <y>150</y>
-      <w>220</w>
+      <w>150</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;</panel_attributes>
-    <additional_attributes>200.0;10.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>430</x>
+      <x>410</x>
       <y>250</y>
-      <w>200</w>
-      <h>70</h>
+      <w>170</w>
+      <h>60</h>
     </coordinates>
-    <panel_attributes>ConcreteColleagueA
+    <panel_attributes>ConcreteStateA
 --
-+ sendMsg(int): void
-+ setMediator(Mediator *): void</panel_attributes>
+ + handle(): void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>660</x>
+      <x>620</x>
       <y>250</y>
-      <w>200</w>
-      <h>70</h>
+      <w>170</w>
+      <h>60</h>
     </coordinates>
-    <panel_attributes>ConcreteColleagueB
+    <panel_attributes>ConcreteStateB
 --
-+ sendMsg(int): void
-+ setMediator(Mediator *): void</panel_attributes>
++ handle(): void</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

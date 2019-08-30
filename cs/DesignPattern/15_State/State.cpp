@@ -1,116 +1,77 @@
 // Design Pattern
-// Mediator.cpp
-// 2019.08.28
+// State.cpp
+// 2019.08.30
 
 #include <iostream>
 #include <string>
 #include <map>
 
 
-class Mediator;
-class Colleague;
-
-
-class Mediator
+class Context
 {
 public:
-	virtual void operation(int id, const std::string &str) {}
-	virtual void regist(int id, Colleague *pc) {}
-};
-
-
-class Colleague
-{
-public:
-	virtual void receiveMsg(const std::string &str) {}
-	virtual void sendMsg(int, const std::string &str) {}
-	void setMediator(Mediator *pm) {
-		this->pm = pm;
+	Context() {
+		ps = new ConcreteStateA::Instance();
 	}
-
+	void changeState(State *ps) {
+		this->ps = ps;
+	}
+	void request() {
+		ps->handle(this);
+	}
 private:
-	Mediator *pm;
+	State *ps;
 };
 
 
-class ConcreteMediator: public Mediator
+class ConcreteStateA: public State
 {
 public:
-	void operation(int id, const std::string &str) {
-		auto it = pMapIC.find(id);
-		if (it == pMapIC.end()) {
-			std::cout << "Not found the colleague!" << std::endl;
-			return;
+	static State* Instance() {
+		if (ps == NULL) {
+			ps = new ConcreteStateA();
 		}
-		Colleague *pc = it->second;
-		pc->receiveMsg(str);
+		return ps;
 	}
-	void regist(int id, Colleague *pc) {
-		auto it = pMapIC.find(id);
-		if (it == pMapIC.end()) {
-			pMapIC.insert(std::make_pair(id, pc));
-			pc->setMediator(this);
+	virtual void handle(Context *pc) {
+		std::cout << "ConcreteStateA::handle()" << std::endl;
+		pc->changeState(ConcreteStateB::Instance());
+	}
+
+private:
+	ConcreteStateA() {}
+	static State *ps;
+};
+
+
+class ConcreteStateB: public State
+{
+public:
+	static State* Instance() {
+		if (ps == NULL) {
+			ps = new ConcreteStateA();
 		}
+		return ps;
+	}
+	virtual void handle(Context *pc) {
+		std::cout << "ConcreteStateB::handle()" << std::endl;
+		pc->changeState(ConcreteStateA::Instance());
 	}
 
 private:
-	std::map<int, Colleague*> pMapIC;
-};
-
-
-class ConcreteColleagueA: public Colleague
-{
-public:
-	void receiveMsg(const std::string &str) {
-		std::cout << "Receive message: " << str << std::endl;
-	}
-	void sendMsg(int id, const std::string &str) {
-		std::cout << "Send message from A: " << str << std::endl;
-		pm->operation(id, str);
-	}
-
-private:
-	Mediator *pm;
-};
-
-
-class ConcreteColleagueB: public Colleague
-{
-public:
-	void receiveMsg(const std::string &str) {
-		std::cout << "Receive message: " << str << std::endl;
-	}
-	void sendMsg(int id, const std::string &str) {
-		std::cout << "Send message from B: " << str << std::endl;
-		pm->operation(id, str);
-	}
-
-private:
-	Mediator *pm;
+	ConcreteStateB() {}
+	static State *ps;
 };
 
 
 int main()
 {
-	Colleague *pcca = new ConcreteColleagueA();
-	Colleague *pccb = new ConcreteColleagueB();
-	Mediator *pm = new ConcreteMediator();
+	Context *pc = new Context();
+	pc->request();
+	pc->request();
+	pc->request();
 
-	pm->regist(1, pcca);
-	pm->regist(2, pccb);
-
-	pcca->setMediator(pm);
-	pccb->setMediator(pm);
-
-	pcca->sendMsg(2, "hello, i am a");
-
-	std::cout << __LINE__ << std::endl;
-	pccb->sendMsg(1, "hello, i am b");
-	std::cout << __LINE__ << std::endl;
-
-	delete pcca;
-	delete pccb;
-	delete pm;
+	delete pc;
 
 	return 0;
 }
