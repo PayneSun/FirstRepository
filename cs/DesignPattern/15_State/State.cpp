@@ -4,7 +4,6 @@
 
 #include "State.h"
 #include "Context.h"
-#include "ConcreteState.h"
 
 #include <iostream>
 

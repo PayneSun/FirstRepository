@@ -6,10 +6,11 @@
 #define CONTEXT_H
 
 #include "State.h"
-#include "ConcreteState.h"
-#include <iostream>
+
 
 class State;
+class ConcreteStateA;
+
 
 class Context
 {
@@ -23,5 +24,24 @@ private:
 	State *ps;
 };
 
+
+Context::Context() {
+	ps = new ConcreteStateA::Instance();
+}
+
+
+void Context::changeState(State *ps) {
+	this->ps = ps;
+}
+
+
+void Context::request() {
+	ps->handle(this);
+}
+
+
+Context::~Context() {
+	//
+}
 
 #endif //CONTEXT_H
