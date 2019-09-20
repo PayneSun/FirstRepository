@@ -4,7 +4,7 @@
 // 2016.10.18
 
 
-#include "../ch09_search/search.h"
+#include "../Search/search.h"
 
 
 // Ëã·¨9.05(a)
