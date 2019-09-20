@@ -4,7 +4,7 @@
 // 2016.09.18
 
 
-#include "public.h"
+#include "..\public.h"
 
 
 // ***************
