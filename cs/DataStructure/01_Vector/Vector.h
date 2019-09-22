@@ -23,6 +23,7 @@ public:
 	Rank find(T const &e, Rank lo, Rank hi) const;
 	int deduplicate();
 	void traverse(Increase<T> &visit);
+	int disordered() const;
 
 private:
 	int _size;

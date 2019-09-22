@@ -89,3 +89,14 @@ void Vector<T>::traverse(Increase<T> &visit) {
 		visit(_elem[i]);
 	}
 }
+
+
+//
+template<typename T>
+int Vector<T>::disordered() const {
+	int n = 0;
+	for (int i = 1; i < _size; ++i) {
+		n += (_elem[i-1] > _elem[i]);
+	}
+	return n;
+}
