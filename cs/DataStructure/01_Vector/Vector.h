@@ -7,7 +7,8 @@ typedef int Rank;
 
 
 template<typename T>
-struct Increase {
+struct Increase
+{
 	virtual void operator()(T &e) { e++; }
 };
 
