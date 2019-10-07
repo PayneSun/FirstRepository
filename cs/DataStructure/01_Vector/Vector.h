@@ -23,6 +23,7 @@ public:
 	T remove(Rank r);
 	Rank find(T const &e, Rank lo, Rank hi) const;
 	int deduplicate();
+	int uniquify();
 	void traverse(Increase<T> &visit);
 	int disordered() const;
 
