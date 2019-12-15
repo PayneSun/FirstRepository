@@ -1,0 +1,25 @@
+
+1---
+	processed 156233 tokens with 392 phrases; found: 286 phrases; correct: 275.
+	accuracy:  99.78%; precision:  96.15%; recall:  70.15%; FB1:  81.12
+	              PER: precision:  96.15%; recall:  70.15%; FB1:  81.12  286
+
+2---
+	processed 3430 tokens with 32 phrases; found: 11 phrases; correct: 11.
+	accuracy:  98.31%; precision: 100.00%; recall:  34.38%; FB1:  51.16
+	              PER: precision: 100.00%; recall:  34.38%; FB1:  51.16  11
+
+3---
+	processed 1106 tokens with 11 phrases; found: 5 phrases; correct: 5.
+	accuracy:  98.73%; precision: 100.00%; recall:  45.45%; FB1:  62.50
+	              PER: precision: 100.00%; recall:  45.45%; FB1:  62.50  5
+
+4---
+	processed 287 tokens with 2 phrases; found: 0 phrases; correct: 0.
+	accuracy:  97.21%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+	              PER: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+5---
+	processed 284 tokens with 4 phrases; found: 3 phrases; correct: 3.
+	accuracy:  99.30%; precision: 100.00%; recall:  75.00%; FB1:  85.71
+	              PER: precision: 100.00%; recall:  75.00%; FB1:  85.71  3
