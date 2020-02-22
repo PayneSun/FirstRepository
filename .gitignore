@@ -1,20 +1,10 @@
-.idea/
+**/bin/
+**/.settings/
+**/.classpath
+**/.project
+**/.cproject
+**/**/a.exe
+**/src/**/a.exe
 
-cs/**/bin/
-cs/**/.settings/
-cs/**/.classpath
-cs/**/.project
-cs/**/.cproject
-cs/**/**/a.exe
-cs/**/src/**/a.exe
+test/data/
 
-ml/**/data/
-ml/**/.idea/
-ml/**/**/*.txt
-
-nlp/**/crf/
-nlp/**/data/
-nlp/**/dist/
-nlp/**/model/
-nlp/**/build/
-nlp/**/.idea/
