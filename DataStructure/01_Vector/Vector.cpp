@@ -8,7 +8,6 @@
 #include <algorithm>
 
 
-//
 template<typename T>
 void Vector<T>::expand() {
 	if (_size < _capacity) {
@@ -25,7 +24,6 @@ void Vector<T>::expand() {
 }
 
 
-//
 template<typename T>
 void Vector<T>::insert(Rank r, T const &e) {
 	this->expand();
@@ -39,7 +37,6 @@ void Vector<T>::insert(Rank r, T const &e) {
 }
 
 
-//
 template<typename T>
 int Vector<T>::remove(Rank lo, Rank hi) {
 	if (lo == hi) { return 0; }
@@ -52,7 +49,6 @@ int Vector<T>::remove(Rank lo, Rank hi) {
 }
 
 
-//
 template<typename T>
 T Vector<T>::remove(Rank r) {
 	T e = _elem[r];
@@ -61,7 +57,6 @@ T Vector<T>::remove(Rank r) {
 }
 
 
-//
 template<typename T>
 Rank Vector<T>::find(T const &e, Rank lo, Rank hi) const {
 	while ((lo < hi--) && e != _elem[hi]) {}
@@ -69,7 +64,6 @@ Rank Vector<T>::find(T const &e, Rank lo, Rank hi) const {
 }
 
 
-//
 template<typename T>
 int Vector<T>::deduplicate() {
 	int oldSize = _size;
@@ -82,7 +76,6 @@ int Vector<T>::deduplicate() {
 }
 
 
-//
 template<typename T>
 void Vector<T>::traverse(Increase<T> &visit) {
 	for (int i = 0; i <_size; ++i) {
@@ -91,7 +84,6 @@ void Vector<T>::traverse(Increase<T> &visit) {
 }
 
 
-//
 template<typename T>
 int Vector<T>::disordered() const {
 	int n = 0;
