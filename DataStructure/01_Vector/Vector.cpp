@@ -1,6 +1,5 @@
-// Algorithm/Vector
 // Vector.h
-// 2019/09/17
+// 2019.09.17
 
 #include "Vector.h"
 
@@ -94,6 +93,60 @@ int Vector<T>::disordered() const {
 }
 
 
-int uniquify() {
+template<typename T>
+int Vector<T>::uniquify() {
 
+    return 0;
 }
+
+
+template<typename T>
+void Vector<T>::copyFrom(T const* A, Rank lo, Rank hi); //复制数组区间A[lo, hi)
+
+
+template<typename T>
+void Vector<T>::expand(); //空间不足时扩容
+
+
+template<typename T>
+void Vector<T>::shrink(); //装填因子过小时压缩
+
+
+template<typename T>
+bool Vector<T>::bubble(Rank lo, Rank hi); //扫描交换
+
+
+template<typename T>
+void Vector<T>::bubbleSort(Rank lo, Rank hi); //起泡排序算法
+
+
+template<typename T>
+Rank Vector<T>::max(Rank lo, Rank hi); //选取最大元素
+
+
+template<typename T>
+void Vector<T>::selectionSort(Rank lo, Rank hi); //选择排序算法
+
+
+template<typename T>
+void Vector<T>::merge(Rank lo, Rank mi, Rank hi); //归并算法
+
+
+template<typename T>
+void Vector<T>::mergeSort(Rank lo, Rank hi); //归并排序算法
+
+
+template<typename T>
+void Vector<T>::heapSort(Rank lo, Rank hi); //堆排序（稍后结合完全堆讲解）
+
+
+template<typename T>
+Rank Vector<T>::partition(Rank lo, Rank hi)
+
+
+template<typename T>
+void Vector<T>::quickSort(Rank lo, Rank hi); //快速排序算法
+
+
+template<typename T>
+void shellSort(Rank lo, Rank hi); //希尔排序算法

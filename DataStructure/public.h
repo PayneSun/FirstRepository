@@ -1,3 +1,6 @@
+// public.h
+//
+
 #ifndef PUBLIC_H
 #define PUBLIC_H
 
@@ -12,6 +15,5 @@ typedef enum {
 typedef enum {
 	FALSE, TRUE
 } Status;
-
 
 #endif   // PUBLIC_H
