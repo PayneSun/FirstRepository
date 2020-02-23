@@ -7,6 +7,12 @@
 typedef int Rank;
 
 template<typename T>
+class Increase {
+
+};
+
+
+template<typename T>
 class Vector {
 public:
 	Vector(int c = DEFAULT_CAPACITY, int s = 0, T v = 0) {

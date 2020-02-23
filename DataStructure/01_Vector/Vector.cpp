@@ -22,7 +22,7 @@ void Vector<T>::expand() {
 }
 
 template<typename T>
-void Vector<T>::insert(Rank r, T const &e) {
+Rank Vector<T>::insert(Rank r, T const &e) {
 	this->expand();
 	for (int i = _size; i > r; --i) {
 		_elem[i] = _elem[i - 1];
