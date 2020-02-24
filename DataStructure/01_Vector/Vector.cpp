@@ -1,11 +1,12 @@
-// Vector.h
-// 2019.09.17
+// Vector.cpp
+// 2020.02.21
 
 #include "Vector.h"
 
 #include <iostream>
 #include <algorithm>
 
+//动态扩容
 template<typename T>
 void Vector<T>::expand() {
 	if (_size < _capacity) {
