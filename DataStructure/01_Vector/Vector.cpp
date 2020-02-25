@@ -22,6 +22,7 @@ void Vector<T>::expand() {
 	delete[] oldElem;
 }
 
+//插入元素
 template<typename T>
 Rank Vector<T>::insert(Rank r, T const &e) {
 	this->expand();
@@ -34,6 +35,7 @@ Rank Vector<T>::insert(Rank r, T const &e) {
 	return r;
 }
 
+//区间删除
 template<typename T>
 int Vector<T>::remove(Rank lo, Rank hi) {
 	if (lo == hi) {
@@ -43,17 +45,21 @@ int Vector<T>::remove(Rank lo, Rank hi) {
 		_elem[lo++] = _elem[hi++];
 	}
 	_size = lo;
-//	shrink();
+	this->shrink();
+
 	return hi - lo;
 }
 
+//单元素删除
 template<typename T>
 T Vector<T>::remove(Rank r) {
 	T e = _elem[r];
 	remove(r, r + 1);
+
 	return e;
 }
 
+//查找
 template<typename T>
 Rank Vector<T>::find(T const &e, Rank lo, Rank hi) const {
 	while ((lo < hi--) && e != _elem[hi]) {
@@ -61,6 +67,7 @@ Rank Vector<T>::find(T const &e, Rank lo, Rank hi) const {
 	return hi;
 }
 
+//唯一化
 template<typename T>
 int Vector<T>::deduplicate() {
 	int oldSize = _size;
@@ -72,13 +79,18 @@ int Vector<T>::deduplicate() {
 	return oldSize - _size;
 }
 
-template<typename T>
-void Vector<T>::traverse(Increase<T> &visit) {
+//遍历
+template<typename T> template <typename VST>
+void Vector<T>::traverse(VST& visit) {
 	for (int i = 0; i < _size; ++i) {
 		visit(_elem[i]);
 	}
 }
 
+template <typename T>
+void increase(Vector<T> &v) {
+	v.traverse(Increase<T>());
+}
 
 template<typename T>
 int Vector<T>::uniquify() {

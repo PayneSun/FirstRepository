@@ -8,7 +8,9 @@ typedef int Rank;
 
 template<typename T>
 class Increase {
-
+	void operator()(T& e) {
+		++e;
+	}
 };
 
 
@@ -52,7 +54,9 @@ public:
 	}
 	Rank search(T const& e, Rank lo, Rank hi) const;
 
-	T& operator[](Rank r);
+	T& operator[](Rank r) {
+		return _elem[r];
+	};
 	const T& operator[](Rank r) const;
 	Vector<T> & operator=(Vector<T> const&);
 	T remove(Rank r);
