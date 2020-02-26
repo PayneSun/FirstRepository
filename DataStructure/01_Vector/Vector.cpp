@@ -92,10 +92,40 @@ void increase(Vector<T> &v) {
 	v.traverse(Increase<T>());
 }
 
+//统计逆序对数
+template<typename T>
+int Vector<T>::disordered() const {
+	int n = 0;
+	for (int i = 1; i < _size; ++i) {
+		n += (_elem[i-1] > _elem[i]);
+	}
+
+	return n;
+}
+
+//有序向量的唯一化（低效）
 template<typename T>
 int Vector<T>::uniquify() {
+	int i = 0, oldSize = _size;
+	while (i < _size - 1) {
+		(_elem[i] == _elem[i+1]) ? remove(i+1) : ++i;
+	}
 
-	return 0;
+	return oldSize - _size;
+}
+
+//有序向量的唯一化（高效）
+template<typename T>
+int Vector<T>::uniquify2() {
+	Rank i = 0, j = 0;
+	while (++j < _size) {
+		if (_elem[i] != _elem[j]) {
+			_elem[++i] = _elem[j];
+		}
+	}
+	_size = ++i;
+
+	return j - i;
 }
 
 template<typename T>

@@ -75,6 +75,8 @@ public:
 	}
 	int deduplicate();
 	int uniquify();
+	int uniquify2();
+	int disordered() const;
 
 	void traverse(void (*)(T&));
 	template<typename VST> void traverse(VST &);
