@@ -100,5 +100,7 @@ private:
 	Rank _size = 0;
 	int _capacity = DEFAULT_CAPACITY;
 	T* _elem = NULL;
-};
-//Vector
+};  //Vector
+
+template<typename T>
+static Rank binSearch(T* A, T const &e, Rank lo, Rank hi);

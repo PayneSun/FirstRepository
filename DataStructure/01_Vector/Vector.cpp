@@ -128,6 +128,29 @@ int Vector<T>::uniquify2() {
 	return j - i;
 }
 
+//有序向量查找
+template<typename T>
+Rank Vector<T>::search(T const& e, Rank lo, Rank hi) const {
+	return (rand() % 2) ?
+			binSearch(_elem, e, lo, hi) : fibSearch(_elem, e, lo, hi);
+}
+
+template<typename T>
+static Rank binSearch(T* A, T const &e, Rank lo, Rank hi) {
+	Rank mi = (lo + hi) >> 1;
+	while (lo < hi) {
+		if (e < A[mi]) {
+			hi = mi;
+		} else if (A[mi] < e) {
+			lo = mi + 1;
+		} else {
+			return mi;
+		}
+	}
+
+	return -1;
+}
+
 template<typename T>
 void Vector<T>::copyFrom(T const* A, Rank lo, Rank hi) {
 
