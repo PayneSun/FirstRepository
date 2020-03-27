@@ -16,7 +16,7 @@ public class Solution_1119 {
 		if (n <= 1) {
 			return 0.0;
 		}
-		
-		return func(n-1) + Math.log(n-1);
+
+		return func(n - 1) + Math.log(n - 1);
 	}
 }

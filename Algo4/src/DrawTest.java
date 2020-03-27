@@ -1,5 +1,4 @@
 import edu.princeton.cs.algs4.StdDraw;
-import edu.princeton.cs.algs4.*;
  
 public class DrawTest {
     public static void main(String[] args) {
