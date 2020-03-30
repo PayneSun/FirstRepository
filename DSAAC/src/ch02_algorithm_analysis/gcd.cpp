@@ -1,7 +1,7 @@
 /**
- * gcd.c
+ * ch02_algorithm_analysis/gcd.cpp
  *
- * 2017.09.26 PayneSun
+ * 2017.09.26
  */
 
 
