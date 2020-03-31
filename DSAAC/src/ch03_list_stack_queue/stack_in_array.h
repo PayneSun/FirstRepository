@@ -1,11 +1,8 @@
 /******************************************
- * ch_03_list_stack_queue/stack_in_array.h
+ * ch03_list_stack_queue/stack_in_array.h
  *
- * 2017.10.17
+ * 2020.03.31
  *****************************************/
-
-#ifndef CH_03_LIST_STACK_QUEUE_STACK_IN_ARRAY_H_
-#define CH_03_LIST_STACK_QUEUE_STACK_IN_ARRAY_H_
 
 #include <stdio.h>
 
@@ -21,6 +18,3 @@ void Push(ElementType X, Stack S);
 ElementType Top(Stack S);
 void Pop(Stack S);
 ElementType TopAndPop(Stack S);
-
-
-#endif /* CH_03_LIST_STACK_QUEUE_STACK_IN_ARRAY_H_ */

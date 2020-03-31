@@ -1,38 +1,32 @@
 /******************************************
- * ch_03_list_stack_queue/stack.c
+ * ch03_list_stack_queue/stack.c
  *
  * 2017.10.17
  *****************************************/
 
-//*
 #include "stack.h"
-#include <stdio.h>
-
+#include <cstdio>
+#include <cstdlib>
 
 /*
  *
  */
-struct Node
-{
-	ElemType Element;
+struct Node {
+	ElementType Element;
 	PtrToNode Next;
 };
 
-
 /*
  *
  */
-int IsEmpty(Stack S)
-{
+int IsEmpty(Stack S) {
 	return S->Next == NULL;
 }
 
-
 /*
  *
  */
-Stack CreateStack(void)
-{
+Stack CreateStack(void) {
 	Stack S;
 
 	S = malloc(sizeof(struct Node));
@@ -45,7 +39,6 @@ Stack CreateStack(void)
 	return S;
 }
 
-
 /*
  *
  */
@@ -53,17 +46,16 @@ void MakeEmpty(Stack S) {
 	if (S == NULL) {
 		return;
 	} else {
-		while(!IsEmpty(S)) {
+		while (!IsEmpty(S)) {
 			Pop(S);
 		}
 	}
 }
 
-
 /*
  *
  */
-void Push(ElemType X, Stack S) {
+void Push(ElementType X, Stack S) {
 	PtrToNode TmpCell;
 
 	TmpCell = malloc(sizeof(struct Node));
@@ -76,18 +68,16 @@ void Push(ElemType X, Stack S) {
 	}
 }
 
-
 /*
  *
  */
-ElemType Top(Stack S) {
+ElementType Top(Stack S) {
 	if (!IsEmpty(S)) {
 		return S->Next->Element;
 	} else {
 		return 0;
 	}
 }
-
 
 /*
  *

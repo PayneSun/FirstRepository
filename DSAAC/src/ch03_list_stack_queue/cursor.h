@@ -1,25 +1,20 @@
-/*
- * ch_03_list_stack_queue/cursor.h
+/**
+ * ch03_list_stack_queue/cursor.h
  *
  * 2017/10/17
  */
 
+#include "define.h"
 
-#ifndef _CURSOR_H
-
-
-#define SpaceSize 10
-typedef int ElementType;
+typedef int PtrToNode;
+typedef PtrToNode List;
+typedef PtrToNode Position;
 
 struct Node {
 	ElementType Element;
 	Position Next;
 };
 struct Node CursorSpace[SpaceSize];
-
-typedef int PtrToNode;
-typedef PtrToNode List;
-typedef PtrToNode Position;
 
 void InitializeCursorSpace(void);
 
@@ -34,6 +29,3 @@ void DeleteList(List L);
 Position Header(const List L);
 Position Advance(const Position P);
 ElementType Retrieve(const Position P);
-
-
-#endif //_CURSOR_H
