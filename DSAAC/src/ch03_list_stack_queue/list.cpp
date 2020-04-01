@@ -7,28 +7,28 @@
 #include "list.h"
 #include <iostream>
 
-template<typename T>
-List<T>::List() {
-	this->head = new Node<T>();
+
+List::List() {
+	this->head = new Node();
 	this->head->next = NULL;
 }
 
 // Return true if List is empty.
-template<typename T>
-bool List<T>::isEmpty() {
+
+bool List::isEmpty() {
 	return this->head->next == NULL;
 }
 
 // Return true if P is the last position in list.
 // Parameter List is unused in this implementation.
-template<typename T>
-bool List<T>::isLast(Pos pos) {
+
+bool List::isLast(Pos pos) {
 	return pos->next == NULL;
 }
 
 // Return Position of X in list or NULL if not found.
-template<typename T>
-Pos List<T>::find(T x) {
+
+Pos List::find(int x) {
 	Pos posRet = this->head->next;
 	while (posRet && posRet->element != x) {
 		posRet = posRet->next;
@@ -39,8 +39,8 @@ Pos List<T>::find(T x) {
 
 // If X is not found, then Next field of returned
 // Position is NULL. Assume a header.
-template<typename T>
-Pos List<T>::findPrevious(T x) {
+
+Pos List::findPrevious(int x) {
 	Pos posRet = this->head;
 	while (posRet && posRet->next->element != x) {
 		posRet = posRet->next;
@@ -51,8 +51,8 @@ Pos List<T>::findPrevious(T x) {
 
 // Delete first occurrence of X from a list,
 // assume use of a header node.
-template<typename T>
-void List<T>::deleteElement(T x) {
+
+void List::deleteElement(int x) {
 	Pos posPrev, posTemp;
 
 	posPrev = this->findPrevious(x);
@@ -64,9 +64,9 @@ void List<T>::deleteElement(T x) {
 }
 
 // Insert x after legal position pos.
-template<typename T>
-void List<T>::insert(T x, Pos pos) {
-	Pos posCurr = new Node<T>();
+
+void List::insert(int x, Pos pos) {
+	Pos posCurr = new Node();
 	posCurr->element = x;
 
 	posCurr->next = pos->next;
@@ -74,8 +74,8 @@ void List<T>::insert(T x, Pos pos) {
 }
 
 // Delete list.
-template<typename T>
-List<T>::~List() {
+
+List::~List() {
 	Pos posCurr = this->head->next, posTemp;
 	while (posCurr) {
 		posTemp = posCurr->next;

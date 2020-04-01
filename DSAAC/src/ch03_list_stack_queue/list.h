@@ -6,30 +6,28 @@
 
 #include "define.h"
 
-template<typename T>
 typedef struct Node {
-	T element;
+	int element;
 	Node *next;
-} Node, *Pos;
+} *Pos;
 
-template<typename T>
 class List {
 private:
 	List();
-	List(T data[]); //create-by-array
+	List(int data[]); //create-by-array
 public:
 	Pos makeEmpty();
 	bool isEmpty();
 	bool isLast(Pos pos);
-	Pos find(T x);
-	void insert(T x, Pos pos);
-	void deleteElement(T x);
-	Pos findPrevious(T x);
+	Pos find(int x);
+	void insert(int x, Pos pos);
+	void deleteElement(int x);
+	Pos findPrevious(int x);
 	Pos header();
 	Pos first();
 	Pos advance(Pos pos);
-	T retrieve(Pos pos);
+	int retrieve(Pos pos);
 	~List();
 private:
-	Node<T> head;
+	Node *head;
 };

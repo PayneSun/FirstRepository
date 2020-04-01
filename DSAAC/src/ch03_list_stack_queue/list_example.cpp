@@ -10,18 +10,17 @@
 #define MaxDegree 100
 
 // 多项式ADT的数组实现
-typedef struct {
+typedef struct Poly {
 	int coeffArray[MaxDegree + 1];
 	int highPower;
 }*Polynomial;
 
 // 多项式ADT的指针实现
-typedef struct PolyNode *PtrToPolyNode;
-typedef struct {
+typedef struct PolyNode {
 	int coefficient;
 	int exponent;
-	PtrToPolyNode next;
-} PolyNode, Polynomial2;
+	PolyNode *next;
+} Polynomial2;
 
 void zeroPolynomial(Polynomial poly) {
 	for (int i = 0; i <= MaxDegree; ++i) {
