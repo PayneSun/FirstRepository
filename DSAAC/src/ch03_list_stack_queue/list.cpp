@@ -7,7 +7,6 @@
 #include "list.h"
 #include <iostream>
 
-
 List::List() {
 	this->head = new Node();
 	this->head->next = NULL;

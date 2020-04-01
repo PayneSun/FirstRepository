@@ -9,7 +9,7 @@
 typedef struct Node {
 	int element;
 	Node *next;
-} *Pos;
+}*Pos;
 
 class List {
 private:
