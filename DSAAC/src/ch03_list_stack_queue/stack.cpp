@@ -1,95 +1,71 @@
 /******************************************
  * ch03_list_stack_queue/stack.c
  *
- * 2017.10.17
+ * 2020.04.02
  *****************************************/
 
 #include "stack.h"
 #include <cstdio>
 #include <cstdlib>
 
-/*
- *
- */
-struct Node {
-	ElementType Element;
-	PtrToNode Next;
-};
-
-/*
- *
- */
-int IsEmpty(Stack S) {
-	return S->Next == NULL;
+//
+template<typename T>
+Stack<T>::Stack() {
+	this->stackTop = new Node<T>();
 }
 
-/*
- *
- */
-Stack CreateStack(void) {
-	Stack S;
-
-	S = malloc(sizeof(struct Node));
-	if (S == NULL) {
-		return NULL;
-	}
-	S->Next = NULL;
-	MakeEmpty(S);
-
-	return S;
+//
+template<typename T>
+int Stack<T>::isEmpty() {
+	return this->stackTop->next == NULL;
 }
 
-/*
- *
- */
-void MakeEmpty(Stack S) {
-	if (S == NULL) {
+//
+template<typename T>
+void Stack<T>::makeEmpty() {
+	if (this->stackTop->next == NULL) {
 		return;
 	} else {
-		while (!IsEmpty(S)) {
-			Pop(S);
+		while (!this->isEmpty()) {
+			this->pop();
 		}
 	}
 }
 
-/*
- *
- */
-void Push(ElementType X, Stack S) {
-	PtrToNode TmpCell;
+//
+template<typename T>
+void Stack<T>::push(T x) {
+	Node<T> tmpNode = new Node<T>();
 
-	TmpCell = malloc(sizeof(struct Node));
-	if (TmpCell == NULL) {
+	if (tmpNode == NULL) {
 		return;
 	} else {
-		TmpCell->Element = X;
-		TmpCell->Next = S->Next;
-		S->Next = TmpCell;
+		tmpNode->element = x;
+		tmpNode->next = this->stackTop->next;
+		this->stackTop->next = tmpNode;
 	}
 }
 
-/*
- *
- */
-ElementType Top(Stack S) {
-	if (!IsEmpty(S)) {
-		return S->Next->Element;
+//
+template<typename T>
+T Stack<T>::top() {
+	if (!this->isEmpty()) {
+		return this->stackTop->element;
 	} else {
 		return 0;
 	}
 }
 
-/*
- *
- */
-void Pop(Stack S) {
-	PtrToNode FirstCell;
+//
+template<typename T>
+void Stack<T>::pop() {
+	Node<T> firstNode;
 
-	if (IsEmpty(S)) {
+	if (this->isEmpty()) {
 		return;
 	} else {
-		FirstCell = S->Next;
-		S->Next = S->Next->Next;
-		free(FirstCell);
+		firstNode = this->stackTop->next;
+		this->stackTop->next = this->stackTop->next->next;
+		delete firstNode;
 	}
 }

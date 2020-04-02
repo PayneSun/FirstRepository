@@ -1,19 +1,29 @@
 /******************************************
- * ch_03_list_stack_queue/stack.h
+ * ch03_list_stack_queue/stack.h
  *
- * 2017.10.17
+ * 2020.04.02
  *****************************************/
 
 #include "define.h"
 
-struct Node;
-typedef struct Node *PtrToNode;
-typedef PtrToNode Stack;
+template<typename T>
+struct Node {
+	T element;
+	Node *next;
+};
 
-int IsEmpty(Stack S);
-Stack CreateStackEmpty(void);
-void DisposeStack(Stack S);
-void MakeEmpty(Stack S);
-void Push(ElementType X, Stack S);
-ElementType Top(Stack S);
-void Pop(Stack S);
+template<typename T>
+class Stack {
+public:
+	Stack();
+	int isEmpty();
+	void dispose();
+	void makeEmpty();
+	void push(T x);
+	T top();
+	void pop();
+
+private:
+	Node<T> *stackTop;
+};
+
