@@ -4,17 +4,20 @@
  * 2020.03.31
  *****************************************/
 
-#include <stdio.h>
-
-struct StackRecord;
-typedef struct StackRecord *Stack;
-
-int IsEmpty(Stack S);
-int IsFull(Stack S);
-Stack CreateStackEmpty(void);
-void DisposeStack(Stack S);
-void MakeEmpty(Stack S);
-void Push(ElementType X, Stack S);
-ElementType Top(Stack S);
-void Pop(Stack S);
-ElementType TopAndPop(Stack S);
+template<typename T>
+class Stack {
+public:
+	Stack(int n);
+	bool isEmpty();
+	bool isFull();
+	void dispose();
+	void makeEmpty();
+	void push(T x);
+	T top();
+	void pop();
+	T topAndPop();
+private:
+	int capacity;
+	int topOfStack;
+	T *array;
+};

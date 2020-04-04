@@ -1,121 +1,84 @@
 /******************************************
  * ch_03_list_stack_queue/stack_in_array.c
  *
- * 2018.08.12
+ * 2020.04.04
  *****************************************/
 
-#include "../ch_03_list_stack_queue/stack_in_array.h"
+#include "stack_in_array.h"
+#include <iostream>
 
 #define EmptyTOS (-1)
-#define MinStackSize (-5)
+#define MinStackSize (5)
 
-
-/*
- *
- */
-struct StackRecord {
-	int Capacity;
-	int TopOfStack;
-	ElemType *Array;
-};
-
-
-/*
- *
- */
-Stack CreateStack(int MaxElements) {
-	if (MaxElements < MinStackSize) {
-		return NULL;
+//
+template<typename T>
+Stack<T>::Stack(int maxElements) {
+	if (maxElements < MinStackSize) {
+		return;
 	}
 
-	Stack S;
-	S = malloc(sizeof(struct StackRecord));
-	if (S == NULL) {
-		return NULL;
-	}
-
-	S->Array = malloc(sizeof(struct StackRecord) * MaxElements);
-	if (S->Array == NULL) {
-		return NULL;
-	}
-	S->Capacity = MaxElements;
-	MakeEmpty(S);
-
-	return S;
+	this->array = new T[maxElements];
+	this->capacity = maxElements;
+	this->topOfStack = EmptyTOS;
+	this->makeEmpty();
 }
 
-
-/*
- *
- */
-void DisposeStack(Stack S) {
-	if (S != NULL) {
-		free(S->Array);
-		free(S);
+//
+template<typename T>
+void Stack<T>::dispose() {
+	if (this->array != NULL) {
+		delete[] this->array;
 	}
 }
 
-
-/*
- *
- */
-int IsEmpty(Stack S) {
-	return S->TopOfStack == EmptyTOS;
+//
+template<typename T>
+bool Stack<T>::isEmpty() {
+	return this->topOfStack == EmptyTOS;
 }
 
-
-/*
- *
- */
-void MakeEmpty(Stack S) {
-	S->TopOfStack = EmptyTOS;
+//
+template<typename T>
+void Stack<T>::makeEmpty() {
+	this->topOfStack = EmptyTOS;
 }
 
-
-/*
- *
- */
-void Push(ElemType X, Stack S) {
-	if (IsFull(S)) {
+//
+template<typename T>
+void Stack<T>::push(T x) {
+	if (this->isFull()) {
 		return;
 	} else {
-		S->Array[++S->TopOfStack] = X;
+		this->array[++this->topOfStack] = x;
 	}
 }
 
-
-/*
- *
- */
-ElemType Top(Stack S) {
-	if (!IsEmpty(S)) {
-		return S->Array[S->TopOfStack];
+//
+template<typename T>
+T Stack<T>::top() {
+	if (!this->isEmpty()) {
+		return this->array[this->topOfStack];
+	} else {
+		return 0;
 	}
-
-	return 0;
 }
 
-
-/*
- *
- */
-void Pop(Stack S) {
-	if (IsEmpty(S)) {
+//
+template<typename T>
+void Stack<T>::pop() {
+	if (this->isEmpty()) {
 		return;
 	} else {
-		S->TopOfStack--;
+		this->topOfStack--;
 	}
 }
 
-
-/*
- *
- */
-ElemType TopAndPop(Stack S) {
-	if (!IsEmpty(S)) {
-		return S->Array[S->TopOfStack--];
+//
+template<typename T>
+T Stack<T>::topAndPop() {
+	if (!this->isEmpty()) {
+		return this->array[this->topOfStack--];
+	} else {
+		return 0;
 	}
-
-	return 0;
 }
-
