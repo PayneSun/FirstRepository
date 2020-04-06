@@ -12,10 +12,9 @@ typedef struct Node {
 }*Pos;
 
 class List {
-private:
+public:
 	List();
 	List(int data[]); //create-by-array
-public:
 	Pos makeEmpty();
 	bool isEmpty();
 	bool isLast(Pos pos);

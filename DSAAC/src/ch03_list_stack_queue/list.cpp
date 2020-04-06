@@ -13,20 +13,17 @@ List::List() {
 }
 
 // Return true if List is empty.
-
 bool List::isEmpty() {
 	return this->head->next == NULL;
 }
 
 // Return true if P is the last position in list.
 // Parameter List is unused in this implementation.
-
 bool List::isLast(Pos pos) {
 	return pos->next == NULL;
 }
 
 // Return Position of X in list or NULL if not found.
-
 Pos List::find(int x) {
 	Pos posRet = this->head->next;
 	while (posRet && posRet->element != x) {
@@ -38,7 +35,6 @@ Pos List::find(int x) {
 
 // If X is not found, then Next field of returned
 // Position is NULL. Assume a header.
-
 Pos List::findPrevious(int x) {
 	Pos posRet = this->head;
 	while (posRet && posRet->next->element != x) {
@@ -50,7 +46,6 @@ Pos List::findPrevious(int x) {
 
 // Delete first occurrence of X from a list,
 // assume use of a header node.
-
 void List::deleteElement(int x) {
 	Pos posPrev, posTemp;
 
@@ -63,7 +58,6 @@ void List::deleteElement(int x) {
 }
 
 // Insert x after legal position pos.
-
 void List::insert(int x, Pos pos) {
 	Pos posCurr = new Node();
 	posCurr->element = x;
@@ -72,8 +66,12 @@ void List::insert(int x, Pos pos) {
 	pos->next = posCurr;
 }
 
-// Delete list.
+//
+Pos List::header() {
+	return this->head;
+}
 
+// Delete list.
 List::~List() {
 	Pos posCurr = this->head->next, posTemp;
 	while (posCurr) {
