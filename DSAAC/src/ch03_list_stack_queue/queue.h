@@ -4,22 +4,25 @@
  * 2020.03.31
  *****************************************/
 
-#include "define.h"
+#include <iostream>
 
-class QueueRecord;
-typedef class QueueRecord *Queue;
-
-class QueueRecord {
-private:
-	QueueRecord();
+template<typename T>
+class Queue {
 public:
-	int IsEmpty(Queue Q);
-	int IsFull(Queue Q);
-	Queue CreateQueue(int MaxElements);
-	void DisposeQueue(Queue Q);
-	void MakeEmpty(Queue Q);
-	void Enqueue(ElementType X, Queue Q);
-	ElementType Front(Queue Q);
-	void Dequeue(Queue Q);
-	ElementType FrontAndDequeue(Queue Q);
+	Queue(int MaxElements);
+	bool isEmpty();
+	bool isFull();
+	void dispose();
+	void makeEmpty();
+	int succ(int value);
+	void enqueue(T x);
+	T front();
+	void dequeue();
+	T frontAndDequeue();
+private:
+	int capacity;
+	int front;
+	int rear;
+	int size;
+	T *array;
 };

@@ -1,67 +1,43 @@
 /******************************************
- * ch_03_list_stack_queue/queue.h
+ * ch03_list_stack_queue/queue.cpp
  *
- * 2017.10.21
+ * 2020.04.06
  *****************************************/
-
 
 #include "queue.h"
 
-#define MinQueueSize (5)
-
-
-/**
- *
- */
-struct QueueRecord {
-	int Capacity;
-	int Front;
-	int Rear;
-	int Size;
-	ElemType *Array;
-};
-
-
-/**
- *
- */
-int IsEmpty(Queue Q) {
-	return Q->Size == 0;
+//
+template<typename T>
+bool Queue<T>::isEmpty() {
+	return this->size == 0;
 }
 
-
-/**
- *
- */
-void MakeEmpty(Queue Q) {
-	Q->Size = 0;
-	Q->Front = 1;
-	Q->Rear = 0;
+//
+template<typename T>
+void Queue<T>::makeEmpty() {
+	this->size = 0;
+	this->front = 1;
+	this->rear = 0;
 }
 
-
-/**
- *
- */
-static int Succ(int Value, Queue Q) {
-	if (++Value == Q->Capacity) {
-		Value = 0;
+//
+template<typename T>
+int Queue<T>::succ(int value) {
+	if (++value == this->capacity) {
+		value = 0;
 	}
 
-	return Value;
+	return value;
 }
 
-
-/*
- *
- */
-void Enqueue(ElemType X, Queue Q) {
-	if (IsFull(Q)) {
+//
+template<typename T>
+void Queue<T>::enqueue(T x) {
+	if (this->isFull()) {
 		return;
 	} else {
-		Q->Size++;
-		Q->Rear = Succ(Q->Rear, Q);
-		Q->Array[Q->Rear] = X;
+		this->size++;
+		this->rear = this->succ(this->rear);
+		this->array[this->rear] = x;
 	}
 }
-
