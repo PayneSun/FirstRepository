@@ -1,13 +1,8 @@
-**/bin/
-**/data/
-**/debug/
-**/.idea/
-**/.settings/
-**/.classpath
-**/.project
-**/.cproject
-**/*.exe
-**/**/a.exe
-
+/*/bin/
+/*/data/
+/*/debug/
+/*/Debug/
+/*/*.*
+/*/*/*.exe
 
 

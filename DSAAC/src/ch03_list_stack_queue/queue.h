@@ -16,7 +16,7 @@ public:
 	void makeEmpty();
 	int succ(int value);
 	void enqueue(T x);
-	T front();
+	T getFront();
 	void dequeue();
 	T frontAndDequeue();
 private:
